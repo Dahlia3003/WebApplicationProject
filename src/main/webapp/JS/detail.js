@@ -12,7 +12,7 @@ function displayColor(self) {
 
     var hiddenDiv = document.getElementById("button");
     hiddenDiv.style.display ="none";
-} 
+}
 function displayBuy(self) {
     var hiddenDiv = document.getElementById("button");
     hiddenDiv.style.display ="flex";
@@ -23,34 +23,20 @@ function displayBuy(self) {
         div.style.border = "1px solid #86868B";
     });
     self.style.border = "1px solid #FF0000"
-} 
+}
 function changeContentBuy() {
     var button = document.getElementById('add_cart');
     gsap.to(button, { duration: 0.5, opacity: 0, onComplete: function() {
-        button.innerHTML = 'Đã thêm vào giỏ hàng';
-        gsap.to(button, { duration: 0.5, opacity: 1 });
-      }});
+            button.innerHTML = 'Đã thêm vào giỏ hàng';
+            gsap.to(button, { duration: 0.5, opacity: 1 });
+        }});
     setTimeout(function() {
         gsap.to(button, { duration: 0.5, opacity: 0, onComplete: function() {
-            button.innerHTML = 'Thêm vào giỏ hàng';
-            gsap.to(button, { duration: 0.5, opacity: 1 });
-          }});
-    }, 3500); 
-  }
-
-//sticky variation
-const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-window.addEventListener('scroll', () => {
-    const color = document.querySelector('.variation');
-    const move = 10-(window.scrollY/fontSize)
-    if (window.scrollY > 0) {
-        if (move>=-7.8)
-            color.style.top = `${move}rem`;
-        else {color.style.top = `-7.8rem`;}
-    } else {
-        color.style.top = '10rem';
-    }
-});
+                button.innerHTML = 'Thêm vào giỏ hàng';
+                gsap.to(button, { duration: 0.5, opacity: 1 });
+            }});
+    }, 3500);
+}
 
 //slideShowPreview
 var point = document.querySelectorAll(".point");
@@ -72,7 +58,7 @@ function changeImage(index) {
         div.style.opacity = "0.5";
     });
     point[index].style.opacity = "1";
-  }
+}
 function startSlideshow() {
     intervalId = setInterval(() => {
         currentIndex = (currentIndex + 1) % totalImages;
@@ -87,10 +73,14 @@ prev.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + totalImages) % totalImages;
     changeImage(currentIndex);
     resetSlideshow();
-  });
+});
 next.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % totalImages;
     changeImage(currentIndex);
     resetSlideshow();
 });
 startSlideshow();
+
+var screenWidth = window.screen.width;
+var scaleRatio = screenWidth / 1366;
+document.body.style.zoom = scaleRatio;
