@@ -13,7 +13,7 @@ article {
     display: flex;
     flex-direction: row;
     margin-top: 6.667rem;
-    margin-left: 7.667rem
+    margin-left: 6.5rem
 }
 
 section.line_product {
@@ -206,23 +206,19 @@ section.vari {
 }
 section.select_color {
     display: none;
-    flex-direction: column;
     opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-section.select_color.visible {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
+    flex-direction: column;
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
 }
 section.select_color .color {
 }
 section.button {
     display: none;
+    opacity: 0;
     flex-direction: row;
     margin-top: 1rem;
     width: 18rem;
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
 }
 section.button .add_cart {
     font-size: 0.9333rem;
