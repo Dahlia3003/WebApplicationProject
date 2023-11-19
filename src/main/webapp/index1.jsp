@@ -19,7 +19,7 @@
         <div class="textmain1">
             <div class="h1-text1">
                 <b class="tng-gi-tr"
-                >Tổng giá trị giỏ hàng của bạn là 44.429.000đ.</b
+                >Tổng giá trị giỏ hàng của bạn là 44.429.000đ..</b
                 >
             </div>
             <div class="b1-text1">
