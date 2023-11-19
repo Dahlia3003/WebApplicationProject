@@ -1,21 +1,34 @@
 function displayColor(self) {
     var hiddenDiv = document.getElementById("color");
     hiddenDiv.style.display ="flex";
-    hiddenDiv.style.transform = "translateY(0)"
-    hiddenDiv.style.opacity = "1"
-
+    hiddenDiv.style.opacity ="0";
+    hiddenDiv.style.transition = "none"
+    hiddenDiv.style.transform = "translateY(-2rem)";
+    setTimeout(function() {
+        hiddenDiv.style.transition = "opacity 0.7s ease-in-out, transform 0.7s ease-in-out"
+    }, 10);
+    setTimeout(function() {
+        hiddenDiv.style.opacity ="1";
+        hiddenDiv.style.transform = "translateY(0rem)";
+    }, 10);
     var buttonDiv = document.querySelectorAll(".vers");
     buttonDiv.forEach(function(div) {
         div.style.border = "1px solid #86868B";
     });
     self.style.border = "1px solid #FF0000"
 
-    var hiddenDiv = document.getElementById("button");
-    hiddenDiv.style.display ="none";
+    var hiddenBtn = document.getElementById("button");
+    hiddenBtn.style.display ="none";
 }
 function displayBuy(self) {
     var hiddenDiv = document.getElementById("button");
     hiddenDiv.style.display ="flex";
+    hiddenDiv.style.opacity ="0"
+    hiddenDiv.style.transform = "translateY(-2rem)";
+    setTimeout(function() {
+        hiddenDiv.style.opacity ="1";
+        hiddenDiv.style.transform = "translateY(0rem)";
+    }, 10);
 
     var colorDiv = self.closest('.color');
     var buttonDiv = colorDiv.querySelectorAll(".vers");
