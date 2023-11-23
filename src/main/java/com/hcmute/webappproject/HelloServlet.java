@@ -1,15 +1,20 @@
 package com.hcmute.webappproject;
 
 import java.io.*;
+
+import Database.*;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import org.eclipse.persistence.jpa.config.Entity;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
-    private String message;
 
     public void init() {
-        message = "Hello World!";
+
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -18,7 +23,6 @@ public class HelloServlet extends HttpServlet {
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
         out.println("</body></html>");
     }
 

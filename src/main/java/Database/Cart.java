@@ -13,6 +13,7 @@ public class Cart {
     private Long id;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<CartLine> cartList;
+
     public List<CartLine> getCartList() {
         return cartList;
     }
@@ -20,6 +21,7 @@ public class Cart {
     public void setCartList(List<CartLine> cartList) {
         this.cartList = cartList;
     }
+
     public Long getId() {
         return id;
     }
