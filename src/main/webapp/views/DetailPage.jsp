@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <title>Nguyễn Văn Thi</title>
-    <link rel="stylesheet" href="CSS/detail.css" >
+    <link rel="stylesheet" href="../CSS/detail.css" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" type="text/css">
 </head>
 <body>
@@ -152,7 +152,7 @@
             <button class="buy">Mua</button>
         </section>
     </section>
-    <script src="JS/detail.js"></script>
+    <script src="../JS/detail.js"></script>
     <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
 </article>
 </body>
