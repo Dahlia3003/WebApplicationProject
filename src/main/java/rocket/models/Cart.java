@@ -1,4 +1,4 @@
-package Database;
+package rocket.models;
 
 import jakarta.persistence.*;
 
@@ -29,5 +29,6 @@ public class Cart {
     public void setId(Long id) {
         this.id = id;
     }
+
 
 }

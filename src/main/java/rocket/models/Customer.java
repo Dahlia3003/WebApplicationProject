@@ -1,4 +1,4 @@
-package Database;
+package rocket.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
