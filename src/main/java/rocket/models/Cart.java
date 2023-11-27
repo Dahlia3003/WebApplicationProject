@@ -1,7 +1,6 @@
 package rocket.models;
 
 import jakarta.persistence.*;
-
 import java.util.List;
 
 @Entity
@@ -30,5 +29,12 @@ public class Cart {
         this.id = id;
     }
 
+    public void checkOut(){
+        Order order = new Order();
+        order.setProductList(this.cartList);
+    }
 
+    public List<CartLine> viewDetails(){
+        return this.cartList;
+    }
 }

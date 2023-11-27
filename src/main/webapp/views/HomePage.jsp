@@ -17,7 +17,7 @@
                 Thanh toán với lãi suất thấp, thời hạn lên đến 24 tháng và chỉ cần trả trước 20% khi bạn chọn Trả Góp Hàng Tháng với MoMo.*
             </div>
             <div>
-                Tìm hiểu thêm
+                Tìm hiểu thêm asdas
             </div>
         </div>
     </div>
@@ -610,6 +610,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>

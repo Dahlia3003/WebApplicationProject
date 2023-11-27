@@ -46,4 +46,10 @@ public class CartLine {
     public void setQuantity(Long quantity) {
         this.quantity = quantity;
     }
+
+    public Float calcPrice()
+    {
+        return this.quantity*this.uniCost;
+    }
+
 }

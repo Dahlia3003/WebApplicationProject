@@ -49,4 +49,6 @@ public class Customer extends Account {
     public void setDeliveryAddressDefault(String deliveryAddressDefault) {
         this.deliveryAddressDefault = deliveryAddressDefault;
     }
+
+
 }
