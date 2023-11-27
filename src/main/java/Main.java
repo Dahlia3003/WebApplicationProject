@@ -1,6 +1,7 @@
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import rocket.Util.DBUtil;
 import rocket.models.*;
 
 public class Main {
@@ -13,9 +14,8 @@ public class Main {
 
         customer.setUserID("1");
 
-
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityManagerFactory emf = DBUtil.getEmf();
+        EntityManager entityManager = emf.createEntityManager();
         entityManager.getTransaction().begin();
         entityManager.persist(cart);
         entityManager.persist(cartLine);
@@ -24,6 +24,6 @@ public class Main {
         entityManager.persist(product);
         entityManager.getTransaction().commit();
         entityManager.close();
-        entityManagerFactory.close();
+        emf.close();
     }
 }
