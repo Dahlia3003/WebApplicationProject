@@ -161,7 +161,7 @@
 .bluebutton1 {
     position: absolute;
     top: 6.44rem;
-    left: 22.19rem;
+    left: calc(50% - 140px);
     border-radius: 8px;
     background-color: var(--color-royalblue-100);
     width: 18.13rem;
@@ -180,13 +180,11 @@
 }
 .mpu73-icon {
     position: relative;
-    width: 12.69rem;
-    height: 12.69rem;
+    width: 60%;
+    height: auto;
     overflow: hidden;
     flex-shrink: 0;
     object-fit: cover;
-    max-width: 12.69rem;
-    max-height: 12.69rem;
 }
 .productimg {
     width: 15.31rem;
@@ -276,7 +274,7 @@
 }
 .item,
 .productline {
-    width: 61.25rem;
+    width: 70.25rem;
 }
 .item {
     flex-direction: row;
@@ -433,14 +431,14 @@
 .summary-value2 {
     align-self: stretch;
     width: 31rem;
-    padding: var(--padding-0) 7.66rem var(--padding-0) var(--padding-0);
+    padding: 0;
     box-sizing: border-box;
     z-index: 1;
 }
 .summary-value2 {
     width: 14.81rem;
     align-items: flex-end;
-    padding: var(--padding-0) var(--padding-0) var(--padding-0) 7.85rem;
+    padding: 0;
     z-index: 0;
     text-align: right;
     font-size: var(--font-size-5xl);
@@ -471,11 +469,10 @@
     height: 9.89rem;
     padding: var(--padding-0) 0.06rem;
     box-sizing: border-box;
-    gap: 0.44rem;
     max-width: 45.94rem;
 }
 .summary {
-    padding: var(--padding-0) 0 2.5rem 15.31rem;
+    padding: var(--padding-0) 0 2.5rem 22.7rem;
     font-size: var(--font-size-mid);
 }
 .thanh-ton1 {
@@ -508,6 +505,7 @@
     text-align: center;
     font-size: var(--font-size-mid);
     color: var(--color-white);
+    width: 69rem;
 }
 .productlist {
     position: absolute;
@@ -520,8 +518,8 @@
 .maincontent1 {
     position: absolute;
     top: 6.44rem;
-    left: calc(50% - 509px);
-    width: 62.5rem;
+    left: calc(50% - 550px);
+    width: 70.25rem;
     height: 89.63rem;
 }
 .cartpageproduct {

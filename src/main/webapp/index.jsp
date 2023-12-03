@@ -12,5 +12,9 @@
     <button type="submit" name="typeButton" value="Cart">Cart</button>
 </form>
 
+<form action="views/cart" method="get">
+    <button type="submit" name="typeButton" value="CartEmpty">CartNe</button>
+</form>
+
 </body>
 </html>

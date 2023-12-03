@@ -103,4 +103,5 @@ public class Product {
     public void setAvailable(Boolean available) {
         isAvailable = available;
     }
+
 }

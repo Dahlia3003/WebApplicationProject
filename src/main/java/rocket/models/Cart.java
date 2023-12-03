@@ -44,4 +44,14 @@ public class Cart {
     public List<CartLine> viewDetails(){
         return this.cartList;
     }
+
+    public Integer calcTotal() {
+        Integer totalUnitCost = 0;
+
+        for (CartLine cartLine : this.cartList) {
+            totalUnitCost += cartLine.getUniCost();
+        }
+        return totalUnitCost;
+    }
+
 }
