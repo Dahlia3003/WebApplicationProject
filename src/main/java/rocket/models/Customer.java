@@ -3,6 +3,8 @@ package rocket.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
 
+import java.util.Date;
+
 @Entity
 public class Customer extends Account {
     private String customerName;
@@ -50,7 +52,8 @@ public class Customer extends Account {
         this.deliveryAddressDefault = deliveryAddressDefault;
     }
 
-    public Customer(String customerName, String phoneNumber, String emailAddress, String deliveryAddressDefault, Cart cart) {
+    public Customer(String userID, String password, Date registerDate, String customerName, String phoneNumber, String emailAddress, String deliveryAddressDefault, Cart cart) {
+        super(userID, password, registerDate);
         this.customerName = customerName;
         this.phoneNumber = phoneNumber;
         this.emailAddress = emailAddress;
