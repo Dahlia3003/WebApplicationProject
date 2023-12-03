@@ -14,7 +14,7 @@ public class Product {
     private String productName;
     private String productDescription;
     private String productImage;
-    private Long price;
+    private Integer price;
     private String variation;
     private Boolean isAvailable;
 
@@ -66,11 +66,11 @@ public class Product {
         this.productImage = productImage;
     }
 
-    public Long getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 

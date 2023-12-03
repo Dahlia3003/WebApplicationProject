@@ -9,7 +9,7 @@ public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<CartLine> cartList;
 
@@ -21,11 +21,11 @@ public class Cart {
         this.cartList = cartList;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -9,17 +9,17 @@ public class CartLine {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
 
-    private Long id;
+    private Integer id;
     @ManyToOne
     private Product product;
     private Float uniCost;
-    private Long quantity;
+    private Integer quantity;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -39,11 +39,11 @@ public class CartLine {
         this.uniCost = uniCost;
     }
 
-    public Long getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Long quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
