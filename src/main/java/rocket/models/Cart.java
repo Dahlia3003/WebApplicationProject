@@ -21,9 +21,11 @@ public class Cart {
         this.cartList = cartList;
     }
 
-    public Cart(Long id, List<CartLine> cartList) {
-        this.id = id;
+    public Cart(List<CartLine> cartList) {
         this.cartList = cartList;
+    }
+
+    public Cart() {
     }
 
     public Long getId() {
