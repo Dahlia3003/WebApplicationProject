@@ -35,4 +35,9 @@ public class Account {
         this.userID = userID;
     }
 
+    public Account(String userID, String password, Date registerDate) {
+        this.userID = userID;
+        this.password = password;
+        this.registerDate = registerDate;
+    }
 }
