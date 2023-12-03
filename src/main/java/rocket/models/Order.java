@@ -11,7 +11,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<CartLine> productList;
     @Temporal(TemporalType.TIMESTAMP)
@@ -80,11 +80,11 @@ public class Order {
     public void setTotalCost(Float totalCost) {
         this.totalCost = totalCost;
     }
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
