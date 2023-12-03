@@ -21,13 +21,6 @@ public class Cart {
         this.cartList = cartList;
     }
 
-    public Cart(List<CartLine> cartList) {
-        this.cartList = cartList;
-    }
-
-    public Cart() {
-    }
-
     public Integer getId() {
         return id;
     }
@@ -37,8 +30,8 @@ public class Cart {
     }
 
     public void checkOut(){
-//        Order order = new Order();
-//        order.setProductList(this.cartList);
+        Order order = new Order();
+        order.setProductList(this.cartList);
     }
 
     public List<CartLine> viewDetails(){
