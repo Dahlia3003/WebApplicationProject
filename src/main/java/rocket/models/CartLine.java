@@ -12,7 +12,7 @@ public class CartLine {
     private Integer id;
     @ManyToOne
     private Product product;
-    private Float uniCost;
+    private Integer uniCost;
     private Integer quantity;
 
     public Integer getId() {
@@ -31,11 +31,11 @@ public class CartLine {
         this.product = product;
     }
 
-    public Float getUniCost() {
+    public Integer getUniCost() {
         return uniCost;
     }
 
-    public void setUniCost(Float uniCost) {
+    public void setUniCost(Integer uniCost) {
         this.uniCost = uniCost;
     }
 
@@ -47,18 +47,18 @@ public class CartLine {
         this.quantity = quantity;
     }
 
-    public Float calcPrice()
+    public Integer calcPrice()
     {
-        return this.quantity*this.uniCost;
+        return this.quantity*this.product.getPrice();
     }
 
     public CartLine() {
 
     }
 
-    public CartLine(Product product, Float uniCost, Integer quantity) {
+    public CartLine(Product product, Integer quantity) {
         this.product = product;
-        this.uniCost = uniCost;
         this.quantity = quantity;
+        this.uniCost = calcPrice();
     }
 }
