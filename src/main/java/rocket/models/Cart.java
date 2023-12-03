@@ -29,6 +29,13 @@ public class Cart {
         this.id = id;
     }
 
+    public Cart(List<CartLine> cartList) {
+        this.cartList = cartList;
+    }
+
+    public Cart() {
+    }
+
     public void checkOut(){
         Order order = new Order();
         order.setProductList(this.cartList);
