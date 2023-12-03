@@ -57,4 +57,8 @@ public class Customer extends Account {
         this.deliveryAddressDefault = deliveryAddressDefault;
         this.cart = cart;
     }
+
+    public Customer() {
+
+    }
 }

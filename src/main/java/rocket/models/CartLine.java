@@ -52,8 +52,11 @@ public class CartLine {
         return this.quantity*this.uniCost;
     }
 
-    public CartLine(Long id, Product product, Float uniCost, Long quantity) {
-        this.id = id;
+    public CartLine() {
+
+    }
+
+    public CartLine(Product product, Float uniCost, Long quantity) {
         this.product = product;
         this.uniCost = uniCost;
         this.quantity = quantity;

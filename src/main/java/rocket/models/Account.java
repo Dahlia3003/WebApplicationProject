@@ -40,4 +40,7 @@ public class Account {
         this.password = password;
         this.registerDate = registerDate;
     }
+
+    public Account() {
+    }
 }

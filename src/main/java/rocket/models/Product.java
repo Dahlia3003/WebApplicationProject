@@ -18,8 +18,7 @@ public class Product {
     private String variation;
     private Boolean isAvailable;
 
-    public Product(String productId, String brand, String line, String productName, String productDescription, String productImage, Long price, String variation, Boolean isAvailable) {
-        this.productId = productId;
+    public Product(String brand, String line, String productName, String productDescription, String productImage, Long price, String variation, Boolean isAvailable) {
         this.brand = brand;
         this.line = line;
         this.productName = productName;
@@ -28,6 +27,9 @@ public class Product {
         this.price = price;
         this.variation = variation;
         this.isAvailable = isAvailable;
+    }
+
+    public Product() {
     }
 
     public String getProductId() {

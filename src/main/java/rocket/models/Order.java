@@ -25,13 +25,16 @@ public class Order {
         return productList;
     }
 
-    public Order(Long id, List<CartLine> productList, Date dateOrder, Customer customer, String status, String paymentMethod) {
-        this.id = id;
+    public Order(List<CartLine> productList, Date dateOrder, Customer customer, String status, String paymentMethod, Float totalCost) {
         this.productList = productList;
         this.dateOrder = dateOrder;
         this.customer = customer;
         this.status = status;
         this.paymentMethod = paymentMethod;
+        this.totalCost = totalCost;
+    }
+
+    public Order() {
     }
 
     public void setProductList(List<CartLine> productList) {
