@@ -2,11 +2,12 @@ package rocket.data;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+import rocket.Util.DBUtil;
 import rocket.models.Account;
 
 public class AccountDB {
     public static void registerUser(Account account) {
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();
@@ -24,7 +25,7 @@ public class AccountDB {
     }
 
     public static void updatePassword(Account account) {
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();
@@ -38,7 +39,7 @@ public class AccountDB {
         }
     }
     public static boolean login(Account account){
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try{
             trans.begin();

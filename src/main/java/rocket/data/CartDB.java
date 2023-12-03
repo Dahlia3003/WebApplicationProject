@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import rocket.models.Cart;
 import rocket.models.CartLine;
+import rocket.Util.DBUtil;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class CartDB {
 
     public static void addCartItem(String cartID, CartLine cartline)
     {
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();
@@ -34,7 +35,7 @@ public class CartDB {
 
     public static void removeCartItem(String cartID, CartLine cartline)
     {
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();
@@ -56,7 +57,7 @@ public class CartDB {
 
     public static void updateQuantity(String cartID, String cartlineID, Long quantity)
     {
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();
@@ -85,7 +86,7 @@ public class CartDB {
 
     public static void updateVariation(String cartID, String cartlineID, String variation)
     {
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();

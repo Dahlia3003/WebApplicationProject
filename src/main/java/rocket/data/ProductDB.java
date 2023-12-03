@@ -3,11 +3,12 @@ package rocket.data;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import rocket.models.Product;
+import rocket.Util.DBUtil;
 
 
 public class ProductDB {
     public static Product getProduct(String productId){
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         try{
             Product p = em.find(Product.class, productId);
             return p ;
@@ -18,7 +19,7 @@ public class ProductDB {
     }
 
     public static void addProduct(Product newProduct) {
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();
@@ -36,7 +37,7 @@ public class ProductDB {
     }
 
     public static void editProduct(Product updatedProduct) {
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();
@@ -54,7 +55,7 @@ public class ProductDB {
     }
 
     public static void hideProduct(String productId) {
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();
