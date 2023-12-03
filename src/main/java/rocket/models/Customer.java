@@ -50,5 +50,11 @@ public class Customer extends Account {
         this.deliveryAddressDefault = deliveryAddressDefault;
     }
 
-
+    public Customer(String customerName, String phoneNumber, String emailAddress, String deliveryAddressDefault, Cart cart) {
+        this.customerName = customerName;
+        this.phoneNumber = phoneNumber;
+        this.emailAddress = emailAddress;
+        this.deliveryAddressDefault = deliveryAddressDefault;
+        this.cart = cart;
+    }
 }
