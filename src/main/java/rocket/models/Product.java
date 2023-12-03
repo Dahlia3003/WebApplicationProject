@@ -14,11 +14,11 @@ public class Product {
     private String productName;
     private String productDescription;
     private String productImage;
-    private Long price;
+    private Integer price;
     private String variation;
     private Boolean isAvailable;
 
-    public Product(String brand, String line, String productName, String productDescription, String productImage, Long price, String variation, Boolean isAvailable) {
+    public Product(String brand, String line, String productName, String productDescription, String productImage, Integer price, String variation, Boolean isAvailable) {
         this.brand = brand;
         this.line = line;
         this.productName = productName;
@@ -80,11 +80,11 @@ public class Product {
         this.productImage = productImage;
     }
 
-    public Long getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 

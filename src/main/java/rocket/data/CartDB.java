@@ -55,7 +55,7 @@ public class CartDB {
         }
     }
 
-    public static void updateQuantity(String cartID, String cartlineID, Long quantity)
+    public static void updateQuantity(String cartID, String cartlineID, Integer quantity)
     {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
@@ -112,5 +112,6 @@ public class CartDB {
             em.close();
         }
     }
+
 
 }
