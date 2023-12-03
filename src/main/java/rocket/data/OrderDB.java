@@ -3,10 +3,11 @@ package rocket.data;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import rocket.models.Order;
+import rocket.Util.DBUtil;
 
 public class OrderDB {
     public static void addProduct(Order order) {
-        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();
