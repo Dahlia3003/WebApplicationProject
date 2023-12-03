@@ -5,9 +5,11 @@
 </head>
 <body>
 
-<form action="YourServletOrJSPToHandleFormSubmission" method="post">
-    <button type="submit" name="action" value="emptyCart">Empty Cart</button>
-    <button type="submit" name="action" value="viewCart">View Cart</button>
+<form action="LoginServlet" method="post">
+    <button type="submit" name="typeButton" value="Login">Login</button>
+    <button type="submit" name="typeButton" value="Register">Register</button>
+    <button type="submit" name="typeButton" value="CartEmpty">CartEmpty</button>
+    <button type="submit" name="typeButton" value="Cart">Cart</button>
 </form>
 
 </body>

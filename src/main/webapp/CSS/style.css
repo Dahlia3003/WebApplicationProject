@@ -96,10 +96,7 @@
     color: #fff;
 }
 .maincontent {
-    top: 5.69rem;
-    flex-direction: column;
-    padding: 3.13rem 0 0;
-    gap: 1.69rem;
+
 }
 .cartemtypage {
     position: relative;
@@ -112,6 +109,17 @@
     font-family: var(--font-arial);
     align-items: center;
     justify-content: center;
+}
+.form{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 50px;
+    height: 500px;
+    border-radius: 10px;
 }
 .tng-gi-tr {
     position: absolute;
@@ -524,5 +532,113 @@
     font-size: var(--font-size-mid);
     color: var(--color-gray-100);
     font-family: var(--font-arial);
+}
+
+.inputContainer {
+    background-color: rgba(255, 0, 0, 0);
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.fInput {
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid rgb(48, 45, 45);
+    background-color: white;
+    padding: 10px;
+    color: white;
+    transition: .1s;
+    position: absolute;
+}
+
+.fInput:focus {
+    border: 1px rgb(0, 136, 255) solid;
+    outline: none;
+}
+
+.fInput:focus::placeholder {
+    color: rgb(0, 136, 255);
+}
+
+.fInput.email {
+    z-index: 1;
+}
+
+.fInput.pass:focus {
+    z-index: 2;
+}
+.fInput.Info{
+
+}
+
+.submit {
+    width: 100%;
+    top: 60px;
+    padding: 7px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+    position: absolute;
+}
+
+.submit:focus + .email {
+    display: none;
+}
+
+.login {
+    width: 100%;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 30px 0;
+    position: absolute;
+    top: 90px;
+    left: 55px
+}
+
+
+.submit:hover {
+    opacity: .9;
+}
+
+.forget {
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    border: 1PX solid #6E6E73;
+    margin-top: 15px;
+    padding: 7px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 50px;
+}
+
+.forget:hover {
+    background-color: rgba(255, 255, 255, 0.151);
+}
+
+.con {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 30px;
+    color: rgb(111, 103, 103);
+    font-size: 13px;
+    font-family: sans-serif;
+    background-color: rgba(255, 0, 0, 0);
+
+}
+
+.con a {
+    color: rgb(0, 136, 255);
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
