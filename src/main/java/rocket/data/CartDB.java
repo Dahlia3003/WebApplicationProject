@@ -69,6 +69,7 @@ public class CartDB {
 
             // Commit the transaction
             transaction.commit();
+            System.out.println("Transaction committed successfully");
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
@@ -78,6 +79,7 @@ public class CartDB {
             em.close();
         }
     }
+
 
     public static void removeCartItem(Integer cartLineID, Cart cart) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
