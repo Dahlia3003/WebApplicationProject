@@ -105,7 +105,7 @@ public class CartDB {
                 System.out.println("rid "+cartLineToRemove.getId());
 
                 cart.getCartList().remove(cartLineToRemove);
-                em.remove(em.merge(cartLineToRemove));
+                em.merge(cart);
             }
 
             // Commit the transaction
