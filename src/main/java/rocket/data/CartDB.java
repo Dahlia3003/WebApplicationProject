@@ -43,56 +43,74 @@ public class CartDB {
         }
     }
 
-    public static void removeCartItem(Integer cartID, CartLine cartLineToRemove) {
+
+    public static void updateQuantity(Integer cartLineID, Integer quantity, Cart cart) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
-        EntityTransaction trans = em.getTransaction();
+        EntityTransaction transaction = null;
 
         try {
-            trans.begin();
+            transaction = em.getTransaction();
+            transaction.begin();
 
-            // Retrieve the Cart by its ID
-            Cart cart = em.find(Cart.class, cartID);
+            // Find the CartLine in the Cart
+            CartLine cartLineToUpdate = null;
+            for (CartLine cartLine : cart.getCartList()) {
+                if (cartLine.getId().equals(cartLineID)) {
+                    cartLineToUpdate = cartLine;
+                    break;
+                }
+            }
 
-            if (cart != null && cartLineToRemove != null) {
-                // Remove the specified CartLine from the Cart's cartList
+            // Update the quantity
+            if (cartLineToUpdate != null) {
+                cartLineToUpdate.setQuantity(quantity);
+                cartLineToUpdate.setUniCost(cartLineToUpdate.calcPrice());
+            }
+
+            // Commit the transaction
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+    }
+
+    public static void removeCartItem(Integer cartLineID, Cart cart) {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        EntityTransaction transaction = null;
+
+        try {
+            transaction = em.getTransaction();
+            transaction.begin();
+
+            // Find and remove the CartLine from the Cart
+            CartLine cartLineToRemove = null;
+            for (CartLine cartLine : cart.getCartList()) {
+                if (cartLine.getId().equals(cartLineID)) {
+                    cartLineToRemove = cartLine;
+                    break;
+                }
+            }
+
+            if (cartLineToRemove != null) {
                 cart.getCartList().remove(cartLineToRemove);
             }
 
-            trans.commit();
+            // Commit the transaction
+            transaction.commit();
         } catch (Exception e) {
-            trans.rollback();
-            e.printStackTrace(); // Handle or log the exception appropriately
-        } finally {
-            em.close();
-        }
-    }
-
-    public static void updateQuantity(Integer cartlineID, Integer quantity) {
-        EntityManager em = DBUtil.getEmf().createEntityManager();
-        EntityTransaction trans = em.getTransaction();
-
-        try {
-            trans.begin();
-
-            // Find the CartLine directly by cartlineID
-            CartLine cartline = em.find(CartLine.class, cartlineID);
-
-            if (cartline != null) {
-                System.out.println("Updating quantity for CartLine ID: " + cartlineID + " to " + quantity);
-                cartline.setQuantity(quantity);
-                // Recalculate unitCost based on the updated quantity
-                cartline.setUniCost(cartline.calcPrice());
+            if (transaction != null) {
+                transaction.rollback();
             }
-
-            trans.commit();
-        } catch (Exception e) {
-            trans.rollback();
-            e.printStackTrace(); // Print the exception stack trace for debugging
+            e.printStackTrace();
         } finally {
             em.close();
         }
     }
-
 
     public static void updateVariation(String cartID, String cartlineID, String variation)
     {

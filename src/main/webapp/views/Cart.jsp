@@ -47,36 +47,29 @@
         <div class="productlist">
             <!-- Bắt đầu lặp qua danh sách CartLine trong Cart -->
             <c:forEach var="cartLine" items="${cart.getCartList()}">
+                <!-- Hiển thị thông tin cho mỗi CartLine -->
                 <div class="productline">
-                    <!-- Hiển thị thông tin cho mỗi CartLine -->
                     <div class="item">
-                        <div class="productimg">
-                            <img class="mpu73-icon" alt="" src="${cartLine.product.productImage}" />
-                        </div>
-                        <div class="productlineinfo">
-                            <div class="productname">
+                        <!-- ... (rest of the HTML) ... -->
+                        <form action="views/CartServlet" method="post">
+                            <div class="quantity">
                                 <b class="iphone-14-pro-container">
-                                    <p class="iphone-14-pro">${cartLine.product.productName}</p>
+                                    Số lượng:
+                                    <input type="number" name="quantity" value="${cartLine.quantity}" min="1" />
+                                    <input type="hidden" name="cartlineID" value="${cartLine.id}" />
+                                    <input name="action" value="update" type="submit" />
                                 </b>
                             </div>
-                            <form action="updateQuantity" method="post">
-                                <div class="quantity">
-                                    <b class="iphone-14-pro-container">
-                                        Số lượng:
-                                        <input type="number" name="quantity" value="${cartLine.quantity}" min="1" />
-                                        <input type="hidden" name="cartlineID" value="${cartLine.id}" />
-                                        <input name="action" value="update" type="submit" />
-                                    </b>
-                                </div>
-                            </form>
-                            <div class="unitcost">
-                                <div class="price">
-                                    <b class="iphone-14-pro-container"><fmt:formatNumber type="number" value="${cartLine.uniCost}" pattern="#, ###"/></b>
-                                </div>
-                                <div class="removeproduct">
-                                    <a href="removeCartItem?cartID=${cart.id}&cartLineID=${cartLine.id}" class="xa">Xóa</a>
-                                </div>
-
+                        </form>
+                        <div class="unitcost">
+                            <div class="price">
+                                <b class="iphone-14-pro-container"><fmt:formatNumber type="number" value="${cartLine.uniCost}" pattern="#, ###"/></b>
+                            </div>
+                            <div class="removeproduct">
+                                <form action="views/CartServlet" method="post">
+                                    <input type="hidden" name="cartlineID" value="${cartLine.id}" />
+                                    <input name="action" value="remove" type="submit" class="xa" />
+                                </form>
                             </div>
                         </div>
                     </div>
