@@ -65,6 +65,7 @@ public class CartDB {
             if (cartLineToUpdate != null) {
                 cartLineToUpdate.setQuantity(quantity);
                 cartLineToUpdate.setUniCost(cartLineToUpdate.calcPrice());
+                em.merge(cartLineToUpdate);
             }
 
             // Commit the transaction
@@ -99,7 +100,12 @@ public class CartDB {
             }
 
             if (cartLineToRemove != null) {
+                System.out.println("cid "+cartLineID);
+                System.out.println("cid "+cart.getId());
+                System.out.println("rid "+cartLineToRemove.getId());
+
                 cart.getCartList().remove(cartLineToRemove);
+                em.remove(em.merge(cartLineToRemove));
             }
 
             // Commit the transaction
