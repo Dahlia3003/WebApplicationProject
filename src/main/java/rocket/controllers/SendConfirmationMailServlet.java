@@ -9,7 +9,9 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import rocket.data.KeyAutheDB;
 import rocket.models.Customer;
+import rocket.models.KeyAuthe;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -33,8 +35,12 @@ public class SendConfirmationMailServlet extends HttpServlet {
 
         System.out.println("confirmationLink " + confirmationLink);
         // Lưu đường dẫn xác nhận trong session hoặc cơ sở dữ liệu
+        KeyAuthe keyAuthe =new KeyAuthe();
+        keyAuthe.setKey(confirmationLink);
+        KeyAutheDB.addKey(keyAuthe);
         request.getSession().setAttribute("confirmationLink", confirmationLink);
         request.getSession().setAttribute("userEmail", userEmail);
+        System.out.println(keyAuthe.getKey());
 
         // Gửi email với đường dẫn xác nhận
         sendConfirmationEmail(userEmail, confirmationLink);
@@ -49,7 +55,7 @@ public class SendConfirmationMailServlet extends HttpServlet {
 
     private String generateConfirmationLink() {
         // Sử dụng UUID để tạo một đường dẫn xác nhận duy nhất
-        return "http://localhost:8080/testmail_war_exploded/confirm?code=" + UUID.randomUUID().toString();
+        return "http://localhost:8080/views/confirm?code=" + UUID.randomUUID().toString();
     }
 
     private void sendConfirmationEmail(String toEmail, String confirmationLink) {

@@ -10,6 +10,7 @@
         <class>rocket.models.Customer</class>
         <class>rocket.models.Order</class>
         <class>rocket.models.Product</class>
+        <class>rocket.models.KeyAuthe</class>
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/PhoneStore"/>
