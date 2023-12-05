@@ -35,7 +35,7 @@ public class Main {
         Cart cart = new Cart(cartLines);
         Cart cart1 = new Cart(cartLines1);
 
-        Customer customer = new Customer("test", "123", new Date(), "Thi dz", "0123456789", "abc@xyz.com", "q9", cart);
+        Customer customer = new Customer("test", "123", new Date(), "Thi dz", "0123456789", "duyvnlx2003@gmail.com", "q9", cart);
         Customer customer1 = new Customer("testt", "123", new Date(), "Thi dz", "0123456789", "abc@xyz.com", "q9", cart1);
 
         EntityManagerFactory emf = DBUtil.getEmf();
