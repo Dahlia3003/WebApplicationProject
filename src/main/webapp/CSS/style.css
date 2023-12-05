@@ -1,3 +1,20 @@
+.update-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: var(--color-royalblue-100);
+    text-decoration: none; /* Tắt gạch chân mặc định */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    transition: text-decoration 0.3s; /* Thêm hiệu ứng chuyển động 0.3 giây */
+}
+
+.update-button:hover {
+    text-decoration: underline; /* Bật gạch chân khi hover */
+}
 .gi-hng-ca {
     position: relative;
     line-height: 2.75rem;

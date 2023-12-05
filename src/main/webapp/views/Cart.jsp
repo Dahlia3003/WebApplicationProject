@@ -66,8 +66,7 @@
                                         <input type="number" name="quantity" value="${cartLine.quantity}" min="1" style="background: none ; width: 4rem; height: 1.75rem; border: none; outline: none; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 24px;">
                                     </label>
                                     <input type="hidden" name="cartlineID" value="${cartLine.id}" />
-                                    <input style="border: none; background: none; padding: 0; margin: 0; cursor: pointer; color: var(--color-royalblue-100); text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 24px;" name="action" value="update" type="submit" />
-                                    <button type="button" onclick="confirmDeleteAndUpdate()" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer; color: var(--color-royalblue-100); text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 24px;" name="action" value="update" type="submit"></button>
+                                    <input class="update-button" name="action" value="update" type="submit" />
                                 </b>
                             </div>
                         </form>
