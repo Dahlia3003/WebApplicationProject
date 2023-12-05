@@ -11,7 +11,7 @@ import rocket.models.Cart;
 
 import java.io.IOException;
 
-@WebServlet(name = "CartServlet", value = "/views/CartServlet")
+@WebServlet(name = "cartServlet", value = "/views/cart")
 public class CartServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,8 +23,17 @@ public class CartServlet extends HttpServlet {
 
         // Check if the cart is already in the session, if not, create a new one
         Cart cart = (Cart) session.getAttribute("cart");
+
+        // If the cart is not in the session, fetch it from the database
         if (cart == null) {
-            cart = new Cart();
+            Integer cartId = 6;  // Replace with the actual cart ID you want to fetch
+            cart = CartDB.getCartById(cartId);
+
+            // If the cart is still null, create a new one
+            if (cart == null) {
+                cart = new Cart();
+            }
+
             session.setAttribute("cart", cart);
         }
 
@@ -38,13 +47,12 @@ public class CartServlet extends HttpServlet {
                 case "update":
                     handleUpdateQuantity(request, cart);
                     break;
-                // Add more actions as needed
             }
         }
 
         // Forward to the JSP with the updated cart
         request.setAttribute("cart", cart);
-        request.getRequestDispatcher("Cart.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/Cart.jsp").forward(request, response);
     }
 
     private void handleRemoveCartItem(HttpServletRequest request, Cart cart) {
@@ -68,7 +76,16 @@ public class CartServlet extends HttpServlet {
             try {
                 Integer cartLineID = Integer.parseInt(cartLineIDParam);
                 Integer quantity = Integer.parseInt(quantityParam);
-                CartDB.updateQuantity(cartLineID, quantity, cart);
+                System.out.println("cartlineid "+cartLineID);System.out.println("quan "+quantity);
+
+                if (quantity < 1) {
+                    // If quantity is less than 1, redirect to the remove action
+                    handleRemoveCartItem(request, cart);
+                    return; // Exit the method to avoid further processing
+                }
+                else{
+                    CartDB.updateQuantity(cartLineID, quantity, cart);
+                }
             } catch (NumberFormatException e) {
                 e.printStackTrace();
                 // Handle the exception as needed

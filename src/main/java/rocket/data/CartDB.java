@@ -65,10 +65,12 @@ public class CartDB {
             if (cartLineToUpdate != null) {
                 cartLineToUpdate.setQuantity(quantity);
                 cartLineToUpdate.setUniCost(cartLineToUpdate.calcPrice());
+                em.merge(cartLineToUpdate);
             }
 
             // Commit the transaction
             transaction.commit();
+            System.out.println("Transaction committed successfully");
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
@@ -78,6 +80,7 @@ public class CartDB {
             em.close();
         }
     }
+
 
     public static void removeCartItem(Integer cartLineID, Cart cart) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
@@ -97,7 +100,12 @@ public class CartDB {
             }
 
             if (cartLineToRemove != null) {
+                System.out.println("cid "+cartLineID);
+                System.out.println("cid "+cart.getId());
+                System.out.println("rid "+cartLineToRemove.getId());
+
                 cart.getCartList().remove(cartLineToRemove);
+                em.merge(cart);
             }
 
             // Commit the transaction
