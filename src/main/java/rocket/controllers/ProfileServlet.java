@@ -33,7 +33,11 @@ public class ProfileServlet extends HttpServlet {
                 customer = new Customer();
             }
             session.setAttribute("customer", customer);
+            customer = CustomerDB.getCustomerById(customer.getUserID());
+            System.out.println("aaa"+customer.getEmailAddress());
         }
+        customer = CustomerDB.getCustomerById(customer.getUserID());
+        System.out.println("aaa"+customer.getEmailAddress());
         // Handle the actions based on the request parameters
         String action = request.getParameter("action");
         if (action != null) {
