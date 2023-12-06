@@ -29,41 +29,23 @@ public class DetailServlet extends HttpServlet {
         String productID = "1";  // Có thể lấy từ request.getParameter("productID");
         Integer cardID = 6;
         Product product = ProductDB.getProduct(productID);
-        //List<String> imagelink = ProductDB.getProductImage(product.getLine(),null);
+        List<String> imagelink = ProductDB.getProductImage(product.getLine(),null);
         List<String> rom = ProductDB.getProductVarRom(product.getLine());
         String action = request.getParameter("action");
-        String line = request.getParameter("line");
-        String variRom = request.getParameter("variRom");
         String id = request.getParameter("id");
-        List<String> imagelink = ProductDB.getProductImage(product.getLine(),variRom);
-        List<Product> color = ProductDB.getProductVarColor(line, variRom);
-        String[] speci=null;
         Product select_pro = new Product();
         if (id!=null)
         {
             select_pro = ProductDB.getProduct(id);
-            request.setAttribute("id",select_pro.getProductId());
-            speci = ProductDB.getSpecifi(select_pro.getProductDescription());
-            imagelink.clear();
-            imagelink.add(select_pro.getProductImage());
         }
         if (product != null) {
             request.setAttribute("product", product);
             request.setAttribute("imagelink", imagelink);
             request.setAttribute("rom", rom);
-            request.setAttribute("color", color);
-            request.setAttribute("variRom", variRom);
-            request.setAttribute("speci", speci);
         }
         String url = "/views/DetailPage.jsp";
         if (action!=null)
         {
-            if (action.equals("add_cart"))
-            {
-                CartLine cartLine = new CartLine(select_pro,1);
-                CartDB.addCartItem(cardID, cartLine);
-            }
-            else
             if (action.equals("buy"))
             {
                 CartLine cartLine = new CartLine(select_pro,1);

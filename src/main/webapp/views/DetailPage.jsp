@@ -28,7 +28,7 @@
                         </div>
                     </c:forEach>
                 </div>
-                <div class="tablist">
+                <div class="tablist" id="tablist">
                     <c:forEach var="link" items="${imagelink}">
                         <div class="point">
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
@@ -87,14 +87,14 @@
                         <p>Chỉ từ <fmt:formatNumber type="number" value="${product.price}" pattern="#,###"/>đ</p>
                     </div>
                 </div>
-                </a>
+<%--                </a>--%>
             </c:forEach>
         </section>
         <section class="select_color" id="color">
             <h1>Màu sắc. <span class="deep">Chọn màu bạn yêu thích!</span></h1>
             <section class="color" id="colorSection">
                 <c:forEach var="Color" items="${color}">
-                    <a href="${request.contextPath}/views/detail?line=${product.line}&variRom=${variRom}&id=${Color.productId}" style="text-decoration: none; color:black">
+<%--                    <a href="${request.contextPath}/views/detail?line=${product.line}&variRom=${variRom}&id=${Color.productId}" style="text-decoration: none; color:black">--%>
                     <div class="vers" onclick="displayBuy(this)" name="action" value="load">
                         <div class="left">
                             <h1>${Color.productName}</h1>
@@ -103,15 +103,15 @@
                             <p>Chỉ từ <fmt:formatNumber type="number" value="${product.price}" pattern="#,###"/>đ</p>
                         </div>
                     </div>
-                    </a>
+<%--                    </a>--%>
                 </c:forEach>
             </section>
         </section>
         <section class="button" id="button">
-            <a href="${request.contextPath}/views/detail?action=add_cart&line=${product.line}&variRom=${variRom}&id=${id}" style="text-decoration: none; color:black">
+<%--            <a href="${request.contextPath}/views/detail?action=add_cart&line=${product.line}&variRom=${variRom}&id=${id}" style="text-decoration: none; color:black">--%>
             <button class="add_cart" id="add_cart" onclick="changeContentBuy()">Thêm vào giỏ hàng</button>
-            </a>
-            <a href="${request.contextPath}/views/detail?action=buy&line=${product.line}&variRom=${variRom}&id=${id}" style="text-decoration: none; color:black">
+<%--            </a>--%>
+            <a href="${request.contextPath}/views/detail?action=buy&id=${id}" id="forward" style="text-decoration: none; color:black">
                 <button class="buy">Mua</button>
             </a>
         </section>

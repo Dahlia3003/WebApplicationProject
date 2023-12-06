@@ -14,7 +14,7 @@
             <h1>Thanh toán</h1>
         </div>
         <div class="cost">
-            <label>Tổng giá trị đơn hàng: <strong>...</strong></label>
+            <label>Tổng giá trị đơn hàng: <strong><fmt:formatNumber type="number" value="${cost}" pattern="#,###"/>đ</strong></label>
         </div>
     </section>
     <section class="payment">
@@ -26,9 +26,6 @@
                 </div>
                 <div class="method" id="paypal_bt" onclick="displayPaymentInfo('paypal_bt')">
                     <label>Ví điện tử Paypal</label>
-                </div>
-                <div class="method" id="abc" onclick="displayPaymentInfo('momo')">
-                    <label>Ví điện tử Momo</label>
                 </div>
             </section>
             <section class="payment_detail">
@@ -112,7 +109,7 @@
                 </section>
             </section>
         </section>
-        <a href="${request.contextPath}/views/checkout?paid=true" style="text-decoration: none; color:black; width: 100%">
+        <a href="${request.contextPath}/views/checkout?paid=true&method=Thanh toán khi nhận hàng" id="pay" style="text-decoration: none; color:black; width: 100%">
             <button class="button">
                 <label>Xác nhận thanh toán</label>
             </button>

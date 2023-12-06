@@ -58,7 +58,6 @@ public class CartDB {
             if (cart != null) {
                 List<CartLine> cartList = cart.getCartList();
                 int index = findCartLineIndexByProduct(cartList,cartline.getProduct());
-                System.out.println(index);
                 if (index==-1)
                 {
                     cartList.add(cartline);
@@ -150,6 +149,26 @@ public class CartDB {
             }
 
             // Commit the transaction
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+    }
+    public static void removeAllCartItem(Cart cart)
+    {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        EntityTransaction transaction = null;
+
+        try {
+            transaction = em.getTransaction();
+            transaction.begin();
+            cart.setCartList(null);
+            em.merge(cart);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {

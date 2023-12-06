@@ -98,7 +98,7 @@ article {
 .cod {
     display: flex;
     flex-direction: row;
-    padding-top: 5rem;
+    padding-top: 2rem;
 }
 .left {
     display: flex;
@@ -120,6 +120,6 @@ article {
 }
 .ppal {
     display:none;
-    margin-top: 6rem;
+    margin-top: 3rem;
     padding-left: 2rem;
 }
