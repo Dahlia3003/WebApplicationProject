@@ -11,8 +11,6 @@ import rocket.Util.DBUtil;
 import java.util.List;
 import java.util.*;
 
-
-
 public class ProductDB {
     public static Product getProduct(String productId){
         EntityManager em = DBUtil.getEmf().createEntityManager();
@@ -100,6 +98,7 @@ public class ProductDB {
         TypedQuery<Product> query = em.createQuery(queryString, Product.class);
         query.setParameter("brand", "%" + brand + "%");
         return query.getResultList();
+    }
 
     public static String getVarRom(Product product) {
         if (product != null && product.getVariation() != null && product.getVariation().contains("|")) {

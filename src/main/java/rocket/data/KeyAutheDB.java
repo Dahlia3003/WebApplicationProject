@@ -13,6 +13,39 @@ import jakarta.persistence.TypedQuery;
 import java.security.Key;
 
 public class KeyAutheDB {
+
+    public static boolean keyExists(String key) {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        try {
+            // Kiểm tra xem có tồn tại KeyAuthe với key cụ thể không
+            Long count = em.createQuery("SELECT COUNT(k) FROM KeyAuthe k WHERE k.key = :key", Long.class)
+                    .setParameter("key", key)
+                    .getSingleResult();
+            System.out.println(count);
+            return count > 0;
+        } finally {
+            em.close();
+        }
+    }
+    public static void removeKey(KeyAuthe key) {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        System.out.println("remove");
+        System.out.println(key.getKey());
+        try {
+            trans.begin();
+            em.remove(em.merge(key));
+            trans.commit();
+        }
+        catch (Exception e)
+        {
+            trans.rollback();
+        }
+        finally
+        {
+            em.close();
+        }
+    }
     public static void addKey(KeyAuthe key) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
