@@ -1,10 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../CSS/HomePageCss.css">
+    <link rel="stylesheet" href="CSS/HomePageCss.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap">
     <title>HomePage</title>
 </head>
@@ -199,6 +200,19 @@
                         33.590.000đ
                     </div>
                 </div>
+                <c:forEach var="p" items="${productlist}">
+                    <div class="items">
+                        <div class="image_div">
+                            <img src="${p.productImage}">
+                        </div>
+                        <div class="items_name_div">
+                            ${p.productName}
+                        </div>
+                        <div class="price_div">
+                            <fmt:formatNumber value="${p.price}" type="currency" pattern="###,###,###.00đ" />
+                        </div>
+                    </div>
+                </c:forEach>
             </div>
         </div>
         <div class="product">
@@ -293,6 +307,19 @@
                         33.590.000đ
                     </div>
                 </div>
+                <c:forEach var="p" items="${productlist2}">
+                    <div class="items">
+                        <div class="image_div">
+                            <img src="${p.productImage}">
+                        </div>
+                        <div class="items_name_div">
+                                ${p.productName}
+                        </div>
+                        <div class="price_div">
+                            <fmt:formatNumber value="${p.price}" type="currency" pattern="###,###,###.00đ" />
+                        </div>
+                    </div>
+                </c:forEach>
             </div>
         </div>
         <div class="product">
@@ -609,6 +636,7 @@
                 </div>
             </div>
         </div>
+        <a href="productservlet?type=brand&&value=Apple">sadasdasda</a>
     </div>
 </body>
 </html>
