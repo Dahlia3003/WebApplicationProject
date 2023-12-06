@@ -111,9 +111,35 @@
         </c:forEach>
             <div class="pagenav">
                 <a href="productservlet?type=${type}&value=${value}&page=${pagenum - 1}" ${pagenum <= 0 ? 'style="pointer-events: none; color: gray;"' : ''}><</a>
+
                 <c:forEach var="page" begin="1" end="${totalpages}">
-                    <a href="productservlet?type=${type}&value=${value}&page=${page - 1}">${page}</a>
+                    <c:choose>
+                        <c:when test="${page eq 1 && (pagenum + 1) - page >= 3}">
+                            <a href="productservlet?type=${type}&value=${value}&page=${page - 1}">${page}</a>
+                            <a>...</a>
+                        </c:when>
+                        <c:otherwise>
+                            <c:if test="${page eq 1 && (pagenum + 1) - page >= 2}">
+                                <a href="productservlet?type=${type}&value=${value}&page=${page - 1}">${page}</a>
+                            </c:if>
+                        </c:otherwise>
+                    </c:choose>
+                    <c:if test="${page eq (pagenum+1)-1 || page eq (pagenum+1) || page eq (pagenum+1)+1}">
+                        <a href="productservlet?type=${type}&value=${value}&page=${page - 1}">${page}</a>
+                    </c:if>
+                    <c:choose>
+                        <c:when test="${page eq totalpages && page - (pagenum+1) >= 3}">
+                            <a>...</a>
+                            <a href="productservlet?type=${type}&value=${value}&page=${page - 1}">${page}</a>
+                        </c:when>
+                        <c:otherwise>
+                            <c:if test="${page eq totalpages && page - (pagenum+1) >= 2}">
+                                <a href="productservlet?type=${type}&value=${value}&page=${page - 1}">${page}</a>
+                            </c:if>
+                        </c:otherwise>
+                    </c:choose>
                 </c:forEach>
+
                 <a href="productservlet?type=${type}&value=${value}&page=${pagenum + 1}" ${pagenum >= totalpages - 1 ? 'style="pointer-events: none; color: gray;"' : ''}>></a>
             </div>
         </div>

@@ -67,6 +67,7 @@
         <span id="password">${ password }</span>
     </div>
 </div>
+
 <script src="${pageContext.request.contextPath}/JS/login.js"></script>
 </body>
 </html>
