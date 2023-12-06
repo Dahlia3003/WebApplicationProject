@@ -1,0 +1,314 @@
+.customername,
+.xin-cho-hunh {
+    position: absolute;
+    width: 34.38rem;
+}
+.xin-cho-hunh {
+    top: calc(50% - 20px);
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+.customername {
+    top: 0;
+    left: calc(50% - 562.5px);
+    height: 2.63rem;
+    overflow: hidden;
+    font-size: 2.25rem;
+}
+.editprofilecontext {
+    position: absolute;
+    top: calc(50% - 14px);
+    left: 0;
+}
+.editprofile {
+    position: absolute;
+    top: 0.38rem;
+    left: calc(50% + 175.5px);
+    width: 13.13rem;
+    height: 1.75rem;
+    overflow: hidden;
+    color: var(--color-royalblue-100);
+    cursor: pointer;
+}
+.editprofilecontext1 {
+    position: absolute;
+    top: calc(50% - 14px);
+    left: 0.06rem;
+}
+.buyed,
+.h-tn {
+    position: absolute;
+}
+.buyed {
+    top: 0.38rem;
+    left: calc(50% + 427.5px);
+    width: 8.44rem;
+    height: 1.75rem;
+    overflow: hidden;
+    color: var(--color-royalblue-100);
+    cursor: pointer;
+}
+.h-tn {
+    top: 0;
+    left: 0;
+    align-items: center;
+    width: 28.06rem;
+    height: 1.44rem;
+    display: inline-block;
+    border: none; /* Loại bỏ viền */
+    outline: none
+
+}
+.cusnamelabel {
+    align-self: stretch;
+    position: relative;
+    height: 1.44rem;
+}
+.a-ch-giao {
+    max-width: 400px;  /* Kích thước ngang tối đa là 400px */
+    width: 100%;      /* Rộng 100% của phần tử cha nếu chữ quá kích thước */
+    border: none; /* Loại bỏ viền */
+    outline: none
+}
+.deliaddresslabel {
+    align-self: stretch;
+    position: relative;
+    height: 7.13rem;
+}
+.cusinfolabel1 {
+    width: 11.31rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-2xl);
+}
+.cusname,
+.mailaddress1 {
+    position: relative;
+    width: 28.06rem;
+    height: 1.44rem;
+    display: inline-block;
+
+}
+.thay-i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: underline;
+}
+.mailaddresschange {
+    position: relative;
+    width: 4.81rem;
+    height: 1.44rem;
+    color: var(--color-royalblue-100);
+    cursor: pointer;
+}
+.mailaddressandchange {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.88rem;
+}
+.div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    border: none; /* Loại bỏ viền */
+    outline: none
+
+}
+.phone {
+    position: relative;
+    width: 7rem;
+    height: 1.44rem;
+}
+.phoneandchange {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.deliaddress {
+    position: relative;
+    width: 28.06rem;
+    height: 7.13rem;
+    justify-content: center;
+    align-items: center;
+}
+.cusinfovalue1,
+.info1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.cusinfovalue1 {
+    flex-direction: column;
+    gap: var(--gap-2xl);
+}
+.info1 {
+    position: absolute;
+    top: 7.81rem;
+    left: 4.38rem;
+    flex-direction: row;
+}
+.thng-tin-c1,
+.title1 {
+    position: absolute;
+    width: 34.38rem;
+}
+.thng-tin-c1 {
+    top: calc(50% - 18px);
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+.title1 {
+    top: 3.63rem;
+    left: 4.38rem;
+    height: 2.63rem;
+    overflow: hidden;
+    font-size: var(--font-size-13xl);
+}
+.lu-thay-i {
+    position: absolute;
+    top: 1.06rem;
+    left: calc(50% - 56px);
+
+}
+.profileload1,
+.savebutton1 {
+    position: absolute;
+    overflow: hidden;
+}
+.savebutton1 {
+    top: 23.19rem;
+    left: 4.38rem;
+    border-radius: var(--br-xs);
+    background-color: var(--color-royalblue-100);
+    width: 10.38rem;
+    height: 3.56rem;
+    color: var(--color-white);
+    font-size: 20px;
+    font-family: var(--font-arial);
+}
+.profileload1 {
+    top: 4.25rem;
+    left: calc(50% - 562.5px);
+    background-color: transparent;
+    border-top: 1px solid var(--color-lightgray-200);
+    box-sizing: border-box;
+    width: 70.31rem;
+    height: 29.31rem;
+    font-size: var(--font-size-xl);
+}
+.component-2infoload {
+    position: absolute;
+    top: 7.19rem;
+    left: calc(50% - 562px);
+    width: 70.31rem;
+    height: 37.88rem;
+}
+.profilepage {
+    position: relative;
+    background-color: var(--color-whitesmoke);
+    width: 100%;
+    height: 64rem;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-arial);
+}
+
+
+.nhp-mail-mi {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.newmaillabel {
+    align-self: stretch;
+    position: relative;
+    height: 1.44rem;
+}
+.cusinfolabel {
+    width: 11.31rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-2xl);
+
+}
+.mailaddress {
+    position: relative;
+    width: 14rem;
+    height: 1.44rem;
+}
+.cusinfovalue,
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-2xl);
+
+}
+.info {
+    position: absolute;
+    top: 7.81rem;
+    left: 4.38rem;
+    flex-direction: row;
+}
+.thng-tin-c,
+.title {
+    position: absolute;
+    width: 34.38rem;
+}
+.thng-tin-c {
+    top: calc(50% - 18px);
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+.title {
+    top: 3.63rem;
+    left: 4.38rem;
+    height: 2.63rem;
+    overflow: hidden;
+    font-size: var(--font-size-13xl);
+}
+.gi-mail-xc {
+    position: absolute;
+    top: calc(50% - 11.5px);
+    left: calc(50% - 81.5px);
+}
+.savebutton {
+    position: absolute;
+    top: 15.81rem;
+    left: 4.38rem;
+    border-radius: var(--br-xs);
+    background-color: var(--color-royalblue-100);
+    width: 11.56rem;
+    height: 3.19rem;
+    overflow: hidden;
+    color: var(--color-white);
+    font-size: 20px;
+    font-family: var(--font-arial);
+}
+.profileload {
+    position: relative;
+    background-color: var(--color-silver-100);
+    border-top: 1px solid var(--color-lightgray-200);
+    box-sizing: border-box;
+    width: 100%;
+    height: 29.31rem;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-xl);
+    color: var(--color-black);
+    font-family: var(--font-arial);
+}
