@@ -35,8 +35,12 @@ public class SendConfirmationMailServlet extends HttpServlet {
 
         System.out.println("confirmationLink " + confirmationLink);
         // Lưu đường dẫn xác nhận trong session hoặc cơ sở dữ liệu
+        System.out.println("cusid"+customer.getUserID());
         KeyAuthe keyAuthe =new KeyAuthe();
         keyAuthe.setKey(confirmationLink);
+        keyAuthe.setCusId(customer.getUserID());
+        keyAuthe.setMail((String) request.getParameter("MailChange"));
+        System.out.println(request.getParameter("MailChange"));
         KeyAutheDB.addKey(keyAuthe);
         request.getSession().setAttribute("confirmationLink", confirmationLink);
         request.getSession().setAttribute("userEmail", userEmail);
