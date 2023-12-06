@@ -67,6 +67,7 @@
         <span id="password">${ password }</span>
     </div>
 </div>
+<a href="productservlet?type=brand&&value=Apple">sadasdasda</a>
 <script src="${pageContext.request.contextPath}/JS/login.js"></script>
 </body>
 </html>
