@@ -6,6 +6,7 @@ import jakarta.persistence.Query;
 import rocket.models.Cart;
 import rocket.models.CartLine;
 import rocket.Util.DBUtil;
+import rocket.models.Product;
 
 import java.util.List;
 
@@ -20,8 +21,16 @@ public class CartDB {
             em.close();
         }
     }
-
-    public static void addCartItem(String cartID, CartLine cartline)
+    private static int findCartLineIndexByProduct(List<CartLine> cartList, Product targetProduct) {
+        for (int i = 0; i < cartList.size(); i++) {
+            CartLine cartLine = cartList.get(i);
+            if (cartLine.getProduct().getProductId() == targetProduct.getProductId()) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static void addCartItem(Integer cartID, CartLine cartline)
     {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
@@ -30,7 +39,21 @@ public class CartDB {
             Cart cart = em.find(Cart.class, cartID);
             if (cart != null) {
                 List<CartLine> cartList = cart.getCartList();
-                cartList.add(cartline);
+                int index = findCartLineIndexByProduct(cartList,cartline.getProduct());
+                System.out.println(index);
+                if (index==-1)
+                {
+                    cartList.add(cartline);
+                }
+                else
+                {
+                    CartLine update =cartList.get(index);
+                    update.setQuantity(update.getQuantity()+cartline.getQuantity());
+                    update.setUniCost(update.calcPrice());
+                    cartList.set(index,update);
+                }
+                cart.setCartList(cartList);
+                em.merge(cart);
             }
             trans.commit();
         }
