@@ -22,7 +22,6 @@ function displayPaymentInfo(id) {
 selected("cod");
 function selected(id) {
     var select = document.getElementById(id);
-    console.log("ok");
     var buttonDiv = document.querySelectorAll(".method");
     buttonDiv.forEach(function(div) {
         div.style.border = "1px solid #86868B";
@@ -45,23 +44,6 @@ function confirmOrder(self){
     });
     console.log(mg);
     var message = document.getElementById('message');
-        message.innerHTML = "Xác nhận thanh toán thành công! <a href='/homeservlet'>Về trang chủ</a>";
-
-    self.style.display="none";
-
-}
-
-function confirmOrders(){
-    var mg='';
-    $.ajax({
-        url: 'checkout?paid=true&method='+method,
-        type: 'POST',
-        success: function() {
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.error('Error:', textStatus, errorThrown);
-        }
-    });
-    var message = document.getElementById('message');
     message.innerHTML = "Xác nhận thanh toán thành công! <a href='/homeservlet'>Về trang chủ</a>";
+    self.style.display="none";
 }
