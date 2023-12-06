@@ -16,7 +16,7 @@
             <h1>Thanh toán</h1>
         </div>
         <div class="cost">
-            <label>Tổng giá trị đơn hàng: <strong><fmt:formatNumber type="number" value="${cost}" pattern="#,###"/>đ</strong></label>
+            <label id="totalcost">Tổng giá trị đơn hàng: <strong><fmt:formatNumber type="number" value="${cost}" pattern="#,###"/>đ</strong></label>
         </div>
     </section>
     <section class="payment">
@@ -83,13 +83,10 @@
                             })
                         }
                         function confirmOrders(){
-                            var mg='';
                             $.ajax({
                                 url: 'checkout?paid=true&method='+method,
                                 type: 'POST',
-                                dataType: 'json',
-                                success: function(data) {
-                                    mg=data;
+                                success: function() {
                                 },
                                 error: function(jqXHR, textStatus, errorThrown) {
                                     console.error('Error:', textStatus, errorThrown);
@@ -98,7 +95,19 @@
                             var message = document.getElementById('message');
                             message.innerHTML = "Xác nhận thanh toán thành công! <a href='/homeservlet'>Về trang chủ</a>";
                         }
-
+                        function hideAll()
+                        {
+                            var codDiv = document.getElementById("cod_detail");
+                            var paypalDiv = document.getElementById("pp_detail");
+                            codDiv.style.display = "none";
+                            paypalDiv.style.display = "none";
+                            var buttonDiv = document.querySelectorAll(".method");
+                            buttonDiv.forEach(function(div) {
+                                div.style.display = "none";
+                            });
+                            var label = document.getElementById("totalcost");
+                            label.innerHTML='Tổng giá trị đơn hàng: <strong>0đ</strong>';
+                        }
                         // Render the PayPal button into #paypal-button-container
                         paypal.Buttons({
                             // Set up the transaction
@@ -118,6 +127,7 @@
                                     // Show a success message to the buyer
                                     confirmOrders();
                                     alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                    hideAll()
                                 });
                             }
 
@@ -128,7 +138,7 @@
             </section>
         </section>
 <%--        <a href="${request.contextPath}/views/checkout?paid=true&method=Thanh toán khi nhận hàng" id="pay" style="text-decoration: none; color:black; width: 100%">--%>
-            <button class="button" onclick="confirmOrder(this)">
+            <button class="button" id="checkout" onclick="confirmOrder(this)">
                 <label>Xác nhận thanh toán</label>
             </button>
 <%--        </a>--%>
