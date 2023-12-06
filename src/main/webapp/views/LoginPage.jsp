@@ -37,6 +37,7 @@
             <input type="text" name="logintext" placeholder="Email or Username" required />
             <input type="hidden" name="action" value="login" />
             <input type="password" name="password" placeholder="Password" required />
+            <input type="checkbox" id="myCheckbox" name="remember" value="true">
             <a href="${pageContext.request.contextPath}/views/ForgotPasswordSendMail.jsp">Forgot your password?</a>
             <button>Log In</button>
         </form>

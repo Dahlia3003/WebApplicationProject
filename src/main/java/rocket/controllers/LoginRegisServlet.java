@@ -34,6 +34,7 @@ public class LoginRegisServlet extends HttpServlet {
     private void login(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
         String text = req.getParameter("logintext");
         String pass = req.getParameter("password");
+        String remember = req.getParameter("remember");
         Customer cus1 = CustomerDB.getCustomerByEmail(text);
         Customer cus2 = CustomerDB.getCustomerById(text);
         HttpSession s = req.getSession();
@@ -42,8 +43,13 @@ public class LoginRegisServlet extends HttpServlet {
         {
             Cookie nameCookie = new Cookie("cusID", cus1.getUserID());
             s.setAttribute("cusID", cus1.getUserID());
-            nameCookie.setMaxAge(60 * 60 * 24); // Cookie expires in 1 day (adjust as needed)
-            rep.addCookie(nameCookie);
+            if (remember.equals("on"))
+            {
+                nameCookie.setMaxAge(60 * 60 * 24); // Cookie expires in 1 day (adjust as needed)
+                rep.addCookie(nameCookie);
+                s.setAttribute("cus", nameCookie);
+            }
+
 
             rep.sendRedirect(req.getContextPath() + "/homeservlet");
         }
