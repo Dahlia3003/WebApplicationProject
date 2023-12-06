@@ -2,7 +2,11 @@ package rocket.data;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+
+import jakarta.persistence.NoResultException;
+
 import jakarta.persistence.Query;
+
 import rocket.Util.DBUtil;
 import rocket.models.KeyAuthe;
 import jakarta.persistence.TypedQuery;
@@ -30,7 +34,6 @@ public class KeyAutheDB {
     public static void removeAllKeys() {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
-
         try {
             trans.begin();
             Query query = em.createQuery("DELETE FROM KeyAuthe");
@@ -61,6 +64,19 @@ public class KeyAutheDB {
             return query.getResultList().stream().findFirst().orElse(null);
         } catch (Exception e) {
             return null; // Không có kết quả, trả về null
+        } finally {
+            em.close();
+        }
+    }
+
+    public static KeyAuthe findKey(String key) {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        try {
+            return em.createQuery("SELECT k FROM KeyAuthe k WHERE k.key = :key", KeyAuthe.class)
+                    .setParameter("key", key)
+                    .getSingleResult();
+        } catch (NoResultException e) {
+            return null;
         } finally {
             em.close();
         }

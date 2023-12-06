@@ -6,6 +6,7 @@ import jakarta.persistence.Query;
 import rocket.models.Cart;
 import rocket.models.CartLine;
 import rocket.Util.DBUtil;
+import rocket.models.Customer;
 import rocket.models.Product;
 
 import java.util.List;
@@ -13,6 +14,23 @@ import java.util.List;
 
 public class CartDB {
 
+    public static void addCart(Cart cart) {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        try {
+            trans.begin();
+            em.persist(cart);
+            trans.commit();
+        }
+        catch (Exception e)
+        {
+            trans.rollback();
+        }
+        finally
+        {
+            em.close();
+        }
+    }
     public static Cart getCartById(Integer cartID) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         try {

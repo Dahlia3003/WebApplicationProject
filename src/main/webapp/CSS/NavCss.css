@@ -40,7 +40,7 @@
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 0.25rem; /* 133.333% */
+    line-height: 0.25 rem; /* 133.333% */
     margin-right: 2.8125rem;
 
     display: inline-block;
@@ -114,12 +114,7 @@
     gap: 2.8125rem;
     flex-shrink: 0;
     flex-wrap: wrap;
-    color: #929292;
-    font-family: var(--font-arial);
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1rem; /* 50% */
+
     background-color: white;
     z-index: 2;
     position: absolute;
@@ -144,4 +139,26 @@
 .search_container .search_wrapper .extend
 {
     height: 2.8125rem;
+}
+
+.search_container .search_wrapper input
+{
+    color: #000;
+    font-family: var(--font-arial);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1rem; /* 50% */
+    border: none;
+    outline: none;
+}
+
+.search_container .search_wrapper input:focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+::placeholder {
+    color: rgb(197, 196, 196);
+    opacity: 1; /* Firefox */
 }
