@@ -1,5 +1,6 @@
 package rocket.controllers;
 
+import com.google.gson.Gson;
 import jakarta.mail.*;
 import jakarta.mail.internet.*;
 import jakarta.servlet.RequestDispatcher;
@@ -33,6 +34,7 @@ public class CheckoutServlet extends HttpServlet {
         String cusID="test";
         Customer customer = CustomerDB.getProfile(cusID);
         request.setAttribute("message","Bạn muốn thanh toán như thế nào?");
+        String message = "Bạn muốn thanh toán như thế nào?";
         request.setAttribute("customer", customer);
         int cost=CartDB.getCartById(6).calcTotal();
         request.setAttribute("cost", cost);
@@ -40,7 +42,7 @@ public class CheckoutServlet extends HttpServlet {
         String url = "/views/Checkout.jsp";
         String paid = request.getParameter("paid");
         String method = request.getParameter("method");
-        if (paid!=null)
+        if (paid!=null && cost!=0)
         {
             HttpSession session = request.getSession(true);
             Integer cartID = (Integer) session.getAttribute("cart");
@@ -53,7 +55,15 @@ public class CheckoutServlet extends HttpServlet {
             OrderDB.addOrder(order);
             sendOrderedEmail(customer.getEmailAddress(), order);
             request.setAttribute("message","Xác nhận thanh toán thành công!");
+            message="ok";
         }
+        if (cost==0)
+        {
+            message="Giỏ hàng của bạn đang rỗng!";
+        }
+        Gson gson = new Gson();
+        response.setContentType("application/json");
+        response.getWriter().write(gson.toJson(message));
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }
