@@ -30,7 +30,11 @@ public class DetailServlet extends HttpServlet {
         HttpSession session = request.getSession(true);
         String productID = request.getParameter("productid");  // Có thể lấy từ request.getParameter("productID");
         Integer cardID = (Integer) CustomerDB.getCustomerById((String) session.getAttribute("cusID")).getCart().getId();
-        Product product = ProductDB.getProduct(productID);
+        Product product = new Product();
+        if (productID!=null)
+        {
+            product = ProductDB.getProduct(productID);
+        }
         List<String> imagelink = ProductDB.getProductImage(product.getLine(),null);
         List<String> rom = ProductDB.getProductVarRom(product.getLine());
         String action = request.getParameter("action");
