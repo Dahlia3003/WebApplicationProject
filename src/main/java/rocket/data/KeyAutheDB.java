@@ -2,6 +2,7 @@ package rocket.data;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Query;
 import rocket.Util.DBUtil;
 import rocket.models.KeyAuthe;
 import jakarta.persistence.TypedQuery;
@@ -26,21 +27,25 @@ public class KeyAutheDB {
         }
     }
 
-    public static void removeKey(KeyAuthe key) {
+    public static void removeAllKeys() {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
+
         try {
             trans.begin();
-            em.remove(key);
+            Query query = em.createQuery("DELETE FROM KeyAuthe");
+            query.executeUpdate();
+            System.out.println("All keys deleted successfully");
             trans.commit();
-        }
-        catch (Exception e)
-        {
-            trans.rollback();
-        }
-        finally
-        {
-            em.close();
+        } catch (Exception e) {
+            if (trans != null && trans.isActive()) {
+                trans.rollback();
+            }
+            e.printStackTrace(); // Handle the exception according to your needs
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
     }
 

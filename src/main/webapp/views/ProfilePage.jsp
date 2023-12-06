@@ -104,7 +104,13 @@
                         <div class="h-tn" style=" border-radius: 2px; font-size: 20px; font-family: var(--font-arial);">${customer.getEmailAddress()}</div>
                     </div>
                     <div class="mailaddress">
-                        <input name="MailChange" class="h-tn" value="${customer.getEmailAddress()}" style=" border-radius: 2px; font-size: 20px; font-family: var(--font-arial);"></input>
+                        <input name="MailChange"
+                               class="h-tn"
+                               value=""
+                               style="border-radius: 2px; font-size: 20px; font-family: var(--font-arial);"
+                               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                               title="Vui lòng nhập địa chỉ email hợp lệ"
+                               required>
                     </div>
                 </div>
             </div>

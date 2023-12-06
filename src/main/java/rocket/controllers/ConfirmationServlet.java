@@ -29,7 +29,7 @@ public class ConfirmationServlet extends HttpServlet {
             customer.setEmailAddress(keyAuthe.getMail());
             handleupdateMail(customer);
             // Xóa đường dẫn xác nhận khỏi session hoặc cơ sở dữ liệu
-            KeyAutheDB.removeKey(keyAuthe);
+            KeyAutheDB.removeAllKeys();
 
             request.getSession().removeAttribute("confirmationLink");
 
