@@ -3,6 +3,7 @@ package rocket.data;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+import rocket.models.Cart;
 import rocket.models.Customer;
 import rocket.Util.DBUtil;
 
@@ -26,7 +27,15 @@ public class CustomerDB {
             em.close();
         }
     }
-
+    public static Customer getProfile(String cusID)
+    {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        try {
+            return em.find(Customer.class, cusID);
+        } finally {
+            em.close();
+        }
+    }
     public static Customer getCustomerById(String customerId) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
