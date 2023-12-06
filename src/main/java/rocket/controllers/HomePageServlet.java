@@ -2,10 +2,7 @@ package rocket.controllers;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.*;
 import rocket.Util.CookieUtil;
 import rocket.data.CustomerDB;
 import rocket.data.ProductDB;
@@ -25,8 +22,12 @@ public class HomePageServlet extends HttpServlet {
     protected  void doPost(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
         Cookie[] cookies = req.getCookies();
         String customerID = CookieUtil.getCookieValue(cookies, "cusID");
-        System.out.println(CustomerDB.getCustomerById(customerID).getCustomerName() + "sss");
-        req.setAttribute("Username", CustomerDB.getCustomerById(customerID).getCustomerName());
+        if (CustomerDB.getCustomerById(customerID)!=null)
+        {
+            req.setAttribute("Username", CustomerDB.getCustomerById(customerID).getCustomerName());
+        }
+        else
+            req.setAttribute("Username", "");
         List<Product> plbyTag = new ArrayList<>();
         plbyTag = ProductDB.searchProductsByTag("Flashship mới ra mắt");
         req.setAttribute("productlist", plbyTag);
