@@ -1,4 +1,18 @@
-function displayColor(self) {
+function displayColor(self, line, rom) {
+    console.log("ok")
+    $.ajax({
+        url: 'color?line='+line+'&variRom='+rom,
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            updateColorSection(data);
+            console.log(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            // Xử lý lỗi trong quá trình gửi yêu cầu hoặc xử lý phản hồi
+            console.error('Error:', textStatus, errorThrown);
+        }
+    });
     var hiddenDiv = document.getElementById("color");
     hiddenDiv.style.display ="flex";
     hiddenDiv.style.opacity ="0";
@@ -20,6 +34,38 @@ function displayColor(self) {
     var hiddenBtn = document.getElementById("button");
     hiddenBtn.style.display ="none";
 }
+
+function updateColorSection(colors) {
+    var colorSection = document.getElementById('colorSection');
+    colorSection.innerHTML = '';
+    colors.forEach(color => {
+        var colorDiv = document.createElement('div');
+        colorDiv.className = 'vers';
+        colorDiv.onclick = function () {
+            displayBuy(this);
+        };
+
+        var leftDiv = document.createElement('div');
+        leftDiv.className = 'left';
+        var h1 = document.createElement('h1');
+        h1.innerText = color.productName;
+        leftDiv.appendChild(h1);
+
+        var rightDiv = document.createElement('div');
+        rightDiv.className = 'right';
+        var p = document.createElement('p');
+        var formattedPrice = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(color.price);
+        formattedPrice = formattedPrice.replace(/[^\d.]/g, '');
+        p.innerHTML = 'Giá chỉ '+formattedPrice+'đ';
+        rightDiv.appendChild(p);
+
+        colorDiv.appendChild(leftDiv);
+        colorDiv.appendChild(rightDiv);
+
+        colorSection.appendChild(colorDiv);
+    });
+}
+
 function displayBuy(self) {
     var hiddenDiv = document.getElementById("button");
     hiddenDiv.style.display ="flex";
