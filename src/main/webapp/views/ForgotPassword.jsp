@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Password Change</title>
     <style>
         html,body{
@@ -59,7 +60,7 @@
             border-radius: 50%;
             cursor:pointer;
             border: none;
-            font-family:'fontawesome';
+            font-family:FontAwesome;
             font-size:14px;
             line-height:24px;
             -webkit-appearance:none;
@@ -114,27 +115,40 @@
             color:#595;
             box-shadow:50em 0 0 #ada inset
         }
+        #submitBtn {
+            width: 90%; /* Adjust the width as needed */
+            margin: 10px auto; /* Center the button horizontally */
+            background: none; /* Remove background */
+            border: none; /* Remove border */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add initial box shadow */
+            transition: box-shadow 0.3s ease; /* Add transition to box shadow */
+        }
+
+        #submitBtn:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Change box shadow on hover */
+        }
     </style>
 </head>
 <body>
-    <div id="box">
-        <form id="myform-search" method="post" autocomplete="off">
-            <h1>Change Password <span>choose a good one!</span></h1>
-            <form>
-                <p>
-                    <input type="password" value="" placeholder="Enter Password" id="p" class="password">
-                    <button class="unmask" type="button"></button>
-                </p>
-                <p>
-                    <input type="password" value="" placeholder="Confirm Password" id="p-c" class="password">
-                    <button class="unmask" type="button"></button>
-                <div id="strong"><span></span></div>
-                <div id="valid"></div>
-                <small>Must be 6+ characters long and contain at least 1 upper case letter, 1 number, 1 special character</small>
-                </p>
-            </form>
-        <form>
-    </div>
+<div id="box">
+    <form id="myform-search" action="passwordservlet" method="post" autocomplete="off">
+        <h1>Change Password <span>choose a good one!</span></h1>
+        <p>
+            <input type="password" name="password" value="" placeholder="Enter Password" id="p" class="password">
+            <button class="unmask" type="button"></button>
+        </p>
+        <p>
+            <input type="password" value="" placeholder="Confirm Password" id="p-c" class="password">
+            <button class="unmask" type="button"></button>
+        </p>
+        <input type="hidden" name="email" value="${email}">
+        <button id="submitBtn" type="submit" style="display:none">Submit</button>
+        <div id="strong"><span></span></div>
+        <div id="valid"></div>
+        <small>Must be 6+ characters long and contain at least 1 upper case letter, 1 number, 1 special character</small>
+        <!-- Add the submit button with display:none initially -->
+    </form>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
@@ -146,24 +160,37 @@
         return false;
     });
 
-    $('.password').on('keyup',function (){
+    $('.password').on('input', function() {
         var p_c = $('#p-c');
         var p = $('#p');
-        console.log(p.val() + p_c.val());
-        if(p.val().length > 0){
-            if(p.val() != p_c.val()) {
+        if (p.val().length > 0) {
+            if (p.val() != p_c.val()) {
                 $('#valid').html("Passwords Don't Match");
+                $('#submitBtn').css('display', 'none');
             } else {
                 $('#valid').html('');
+                $('#submitBtn').css('display', 'block');
             }
-            var s = 'weak'
-            if(p.val().length > 5 && p.val().match(/\d+/g))
+            var s = 'weak';
+            if (p.val().length > 5 && p.val().match(/\d+/g))
                 s = 'medium';
-            if(p.val().length > 6 && p.val().match(/[^\w\s]/gi))
+            if (p.val().length > 6 && p.val().match(/[^\w\s]/gi))
                 s = 'strong';
-            $('#strong span').addClass(s).html(s);
+            $('#strong span').attr('class', s).html(s);
+        } else {
+            // Reset the strength indicator and hide the submit button if the password is empty
+            $('#valid').html('');
+            $('#submitBtn').css('display', 'none');
+            $('#strong span').attr('class', '').html('');
         }
-    });
+    }
+    );
+    const urlParams = new URLSearchParams(window.location.search);
+    const email = urlParams.get('email');
+    const code = urlParams.get('code');
+
+    document.querySelector('input[name="email"]').value = email;
 </script>
+
 </body>
 </html>

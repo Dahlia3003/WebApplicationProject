@@ -26,15 +26,17 @@
         </form>
     </div>
     <div class="form-container sign-in-container">
-        <form action="#">
+        <form action="${pageContext.request.contextPath}/loginregister" method="post">
             <h1>Log in</h1>
             <!-- <div class="social-container">
                 <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div> -->
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <p id="errorMessage1" style="display: none; font-size: 13px; font-weight: 100;letter-spacing: 0.5px; margin: 0 0 0 0">Username or password is wrong</p>
+            <input type="text" name="logintext" placeholder="Email or Username" required />
+            <input type="hidden" name="action" value="login" />
+            <input type="password" name="password" placeholder="Password" required />
             <a href="${pageContext.request.contextPath}/views/ForgotPasswordSendMail.jsp">Forgot your password?</a>
             <button>Log In</button>
         </form>
@@ -54,6 +56,7 @@
         </div>
     </div>
     <div id="isRegisterSuccess" style="display: none;">${isRegisterSuccess}</div>
+    <div id="isLoginSuccess" style="display: none;">${isLoginSuccess}</div>
     <div id="serverValues" style="display:none;">
         <span id="fullName">${fullName}</span>
         <span id="phone">${ phone }</span>

@@ -37,4 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
             container.classList.add("right-panel-active");
         }, 150);
     }
+    var isLoginSuccess = document.getElementById('isLoginSuccess').textContent.trim();
+    if (isLoginSuccess === '0') {
+        var errorMessage1 = document.getElementById('errorMessage1')
+        errorMessage1.style.display = 'block'
+    }
 });
