@@ -6,7 +6,7 @@ import rocket.models.Order;
 import rocket.Util.DBUtil;
 
 public class OrderDB {
-    public static void addProduct(Order order) {
+    public static void addOrder(Order order) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {

@@ -1,14 +1,18 @@
 function displayPaymentInfo(id) {
     var codDiv = document.getElementById("cod_detail");
     var paypalDiv = document.getElementById("pp_detail");
+    var linkElement = document.getElementById('pay');
+    console.log("in");
     if (id=="cod") {
         codDiv.style.display = "flex";
         paypalDiv.style.display = "none";
+        linkElement.href = 'checkout?paid=true&method=Thanh toán khi nhận hàng';
     }
     else
     if (id=="paypal_bt"){
         codDiv.style.display = "none";
         paypalDiv.style.display = "block";
+        linkElement.href = 'checkout?paid=true&method=Ví điện tử Paypal';
     }
     selected(id)
 }

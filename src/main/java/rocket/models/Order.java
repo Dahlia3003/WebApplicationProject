@@ -12,7 +12,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Integer id;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private List<CartLine> productList;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateOrder;
@@ -20,18 +20,18 @@ public class Order {
     private Customer customer;
     private String status;
     private String paymentMethod;
-    private Float totalCost;
+    private Integer totalCost;
     public List<CartLine> getProductList() {
         return productList;
     }
 
-    public Order(List<CartLine> productList, Date dateOrder, Customer customer, String status, String paymentMethod, Float totalCost) {
+    public Order(List<CartLine> productList, Date dateOrder, Customer customer, String status, String paymentMethod, Integer totalCost) {
         this.productList = productList;
         this.dateOrder = dateOrder;
         this.customer = customer;
         this.status = status;
         this.paymentMethod = paymentMethod;
-        this.totalCost = totalCost;
+        this.totalCost = calcTotal();
     }
 
     public Order() {
@@ -73,11 +73,11 @@ public class Order {
         this.paymentMethod = paymentMethod;
     }
 
-    public Float getTotalCost() {
+    public Integer getTotalCost() {
         return totalCost;
     }
 
-    public void setTotalCost(Float totalCost) {
+    public void setTotalCost(Integer totalCost) {
         this.totalCost = totalCost;
     }
     public Integer getId() {
@@ -87,5 +87,12 @@ public class Order {
     public void setId(Integer id) {
         this.id = id;
     }
+    public Integer calcTotal() {
+        Integer totalUnitCost = 0;
 
+        for (CartLine cartLine : this.productList) {
+            totalUnitCost += cartLine.getUniCost();
+        }
+        return totalUnitCost;
+    }
 }
