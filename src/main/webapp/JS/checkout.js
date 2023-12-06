@@ -1,3 +1,4 @@
+var method='Thanh toán khi nhận hàng'
 function displayPaymentInfo(id) {
     var codDiv = document.getElementById("cod_detail");
     var paypalDiv = document.getElementById("pp_detail");
@@ -25,4 +26,15 @@ function selected(id) {
         div.style.border = "1px solid #86868B";
     });
     select.style.border = "1px solid #FF0000"
+}
+function confirmOrder(){
+    $.ajax({
+        url: 'addcart?id='+selectedProduct,
+        type: 'GET',
+        success: function() {
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error('Error:', textStatus, errorThrown);
+        }
+    });
 }

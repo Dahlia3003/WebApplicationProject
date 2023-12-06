@@ -1,5 +1,7 @@
 package rocket.controllers;
 
+import jakarta.mail.*;
+import jakarta.mail.internet.*;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -16,9 +18,11 @@ import rocket.models.Customer;
 import rocket.models.Order;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 
 @WebServlet(name = "checkoutServlet", value = "/views/checkout")
 public class CheckoutServlet extends HttpServlet {
@@ -47,9 +51,47 @@ public class CheckoutServlet extends HttpServlet {
             System.out.println(cartLines.size());
             Order order = new Order(cartLines, new Date(), customer, "Đang giao", method, 0);
             OrderDB.addOrder(order);
+            sendOrderedEmail(customer.getEmailAddress(), order);
             request.setAttribute("message","Xác nhận thanh toán thành công!");
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
+    }
+    private void sendOrderedEmail(String toEmail, Order order) {
+        // Điều chỉnh cài đặt email của bạn ở đây
+        String fromEmail = "duyvnlx3016@gmail.com";
+        String appPassword = "cetd prqi badk wkit";
+
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+
+        Session session = Session.getInstance(props, new Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(fromEmail, appPassword);
+            }
+        });
+
+        try {
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(fromEmail));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
+            try {
+                message.setSubject(MimeUtility.encodeText("Bạn đã đặt một đơn hàng", "UTF-8", "B"));
+            } catch (UnsupportedEncodingException e) {
+                throw new RuntimeException("Error encoding subject", e);
+            }
+            Multipart multipart = new MimeMultipart();
+            MimeBodyPart textPart = new MimeBodyPart();
+            textPart.setText("Bạn vừa đặt thành công một đơn hàng trên RocketStore!", "utf-8", "html");
+            multipart.addBodyPart(textPart);
+            message.setContent(multipart);
+            Transport.send(message);
+            System.out.println("Email sent successfully");
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
