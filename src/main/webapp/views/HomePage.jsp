@@ -201,17 +201,19 @@
                     </div>
                 </div>
                 <c:forEach var="p" items="${productlist}">
-                    <div class="items">
-                        <div class="image_div">
-                            <img src="${p.productImage}">
+                    <a href="/views/detail?productid=${p.productId}">
+                        <div class="items">
+                            <div class="image_div">
+                                <img src="${p.productImage}">
+                            </div>
+                            <div class="items_name_div">
+                                    ${p.productName}
+                            </div>
+                            <div class="price_div">
+                                <fmt:formatNumber value="${p.price}" type="currency" pattern="###,###,###.00đ" />
+                            </div>
                         </div>
-                        <div class="items_name_div">
-                            ${p.productName}
-                        </div>
-                        <div class="price_div">
-                            <fmt:formatNumber value="${p.price}" type="currency" pattern="###,###,###.00đ" />
-                        </div>
-                    </div>
+                    </a>
                 </c:forEach>
             </div>
         </div>
@@ -636,7 +638,7 @@
                 </div>
             </div>
         </div>
-        <a href="productservlet?type=brand&&value=Apple">sadasdasda</a>
+
     </div>
 </body>
 </html>

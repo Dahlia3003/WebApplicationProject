@@ -19,19 +19,15 @@
         <b class="gi-hng-ca">Giỏ hàng của bạn đang trống.</b>
       </div>
       <div class="b1-text">
-        <div class="ng-nhp">
-          Đăng nhập để xem bạn có thiết bị nào đã lưu không. Hoặc tiếp tục
-          mua sắm.
+        <div class="ng-nhp">Tiếp tục mua sắm.
         </div>
       </div>
     </div>
     <div class="buttonlist">
-      <div class="bluebutton">
-        <span class="ng-nhp1">Đăng Nhập</span>
-      </div>
-      <div class="whitebutton">
+<a href="/homeservlet" > <div class="whitebutton">
         <span class="tip-tc-mua">Tiếp Tục Mua Sắm</span>
       </div>
+  </a>
     </div>
   </div>
 </div>

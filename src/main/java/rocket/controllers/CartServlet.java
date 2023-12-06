@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import rocket.data.CartDB;
+import rocket.data.CustomerDB;
 import rocket.models.Cart;
 
 import java.io.IOException;
@@ -23,11 +24,11 @@ public class CartServlet extends HttpServlet {
 
         // Check if the cart is already in the session, if not, create a new one
         Cart cart = (Cart) session.getAttribute("cart");
-
+        String cusID = (String) session.getAttribute("cusID");
         // If the cart is not in the session, fetch it from the database
         if (cart == null) {
-            Integer cartId = 6;  // Replace with the actual cart ID you want to fetch
-            cart = CartDB.getCartById(cartId);
+            System.out.println(session.getAttribute("cusID"));// Replace with the actual cart ID you want to fetch
+            cart = CustomerDB.getCustomerById(cusID).getCart();
 
             // If the cart is still null, create a new one
             if (cart == null) {
@@ -36,6 +37,7 @@ public class CartServlet extends HttpServlet {
 
             session.setAttribute("cart", cart);
         }
+        cart = CustomerDB.getCustomerById(cusID).getCart();
 
         // Handle the actions based on the request parameters
         String action = request.getParameter("action");
@@ -52,7 +54,14 @@ public class CartServlet extends HttpServlet {
 
         // Forward to the JSP with the updated cart
         request.setAttribute("cart", cart);
-        request.getRequestDispatcher("/views/Cart.jsp").forward(request, response);
+        if(session.getAttribute("cusID")==null){
+            request.getRequestDispatcher("/views/LoginPage.jsp").forward(request, response);
+        } else if (cart.getCartList().size()==0) {
+            request.getRequestDispatcher("/views/EmptyCart.jsp").forward(request, response);
+        }
+        else {
+            request.getRequestDispatcher("/views/Cart.jsp").forward(request, response);
+        }
     }
 
     private void handleRemoveCartItem(HttpServletRequest request, Cart cart) {

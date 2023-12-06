@@ -125,11 +125,13 @@
                     </div>
                 </div>
             </div>
-            <div class="checkout">
-                <div class="checkoutbutton">
-                    <div class="thanh-ton1">Thanh Toán</div>
+            <a href="/views/checkout" style="text-decoration: none">
+                <div class="checkout">
+                    <div class="checkoutbutton">
+                        <div class="thanh-ton1">Thanh Toán</div>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

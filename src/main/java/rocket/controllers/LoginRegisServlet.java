@@ -47,7 +47,7 @@ public class LoginRegisServlet extends HttpServlet {
             {
                 nameCookie.setMaxAge(60 * 60 * 24); // Cookie expires in 1 day (adjust as needed)
                 rep.addCookie(nameCookie);
-                s.setAttribute("cus", nameCookie);
+                s.setAttribute("cusID", nameCookie);
             }
 
 
@@ -61,7 +61,7 @@ public class LoginRegisServlet extends HttpServlet {
                 nameCookie.setMaxAge(60 * 60 * 24); // Cookie expires in 1 day (adjust as needed)
                 rep.addCookie(nameCookie);
                 rep.sendRedirect(req.getContextPath() + "/homeservlet");
-                s.setAttribute("cusID", cus1.getUserID());
+                s.setAttribute("cusID", cus2.getUserID());
             }
             else
             {

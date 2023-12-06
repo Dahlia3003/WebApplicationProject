@@ -33,9 +33,9 @@ public class ConfirmationServlet extends HttpServlet {
 
             request.getSession().removeAttribute("confirmationLink");
 
-            response.getWriter().write("Confirmation successful!");
+            response.sendRedirect(request.getContextPath() + "/views/ConfirmChangeMail.jsp");
         } else {
-            response.getWriter().write("Invalid confirmation code");
+            response.sendRedirect(request.getContextPath() + "/views/LinkExpiredMailChange.jsp");
         }
     }
 

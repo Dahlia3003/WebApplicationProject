@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.postgresql.util.LruCache;
 import rocket.data.CartDB;
+import rocket.data.CustomerDB;
 import rocket.data.ProductDB;
 import rocket.models.Cart;
 import rocket.models.CartLine;
@@ -26,8 +27,9 @@ public class DetailServlet extends HttpServlet {
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String productID = "1";  // Có thể lấy từ request.getParameter("productID");
-        Integer cardID = 6;
+        HttpSession session = request.getSession(true);
+        String productID = request.getParameter("productid");  // Có thể lấy từ request.getParameter("productID");
+        Integer cardID = (Integer) CustomerDB.getCustomerById((String) session.getAttribute("cusID")).getCart().getId();
         Product product = ProductDB.getProduct(productID);
         List<String> imagelink = ProductDB.getProductImage(product.getLine(),null);
         List<String> rom = ProductDB.getProductVarRom(product.getLine());
@@ -50,7 +52,6 @@ public class DetailServlet extends HttpServlet {
             {
                 CartLine cartLine = new CartLine(select_pro,1);
                 CartDB.addCartItem(cardID, cartLine);
-                HttpSession session = request.getSession(true);
                 session.setAttribute("cart",CartDB.getCartById(cardID));
                 url="cart";
             }

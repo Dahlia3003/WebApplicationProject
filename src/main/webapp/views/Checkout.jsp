@@ -82,6 +82,22 @@
                                 body: JSON.stringify({ 'productId': productId })
                             })
                         }
+                        function confirmOrders(){
+                            var mg='';
+                            $.ajax({
+                                url: 'checkout?paid=true&method='+method,
+                                type: 'POST',
+                                dataType: 'json',
+                                success: function(data) {
+                                    mg=data;
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) {
+                                    console.error('Error:', textStatus, errorThrown);
+                                }
+                            });
+                            var message = document.getElementById('message');
+                            message.innerHTML = "Xác nhận thanh toán thành công! <a href='/homeservlet'>Về trang chủ</a>";
+                        }
 
                         // Render the PayPal button into #paypal-button-container
                         paypal.Buttons({
@@ -100,8 +116,8 @@
                             onApprove: function (data, actions) {
                                 return actions.order.capture().then(function (details) {
                                     // Show a success message to the buyer
-                                    completeOrder()
-                                    alert('Transaction completed by' + details.payer.name.given_name + '!');
+                                    confirmOrders();
+                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
                                 });
                             }
 

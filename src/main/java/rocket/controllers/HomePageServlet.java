@@ -21,16 +21,20 @@ public class HomePageServlet extends HttpServlet {
     }
     protected  void doPost(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
         Cookie[] cookies = req.getCookies();
+        HttpSession s = req.getSession();
         String customerID = CookieUtil.getCookieValue(cookies, "cusID");
+        System.out.println("home"+customerID);
         if (CustomerDB.getCustomerById(customerID)!=null)
         {
             req.setAttribute("Username", CustomerDB.getCustomerById(customerID).getCustomerName());
+            s.setAttribute("cusID", customerID);
         }
         else
             req.setAttribute("Username", "");
         List<Product> plbyTag = new ArrayList<>();
-        plbyTag = ProductDB.searchProductsByTag("Flashship mới ra mắt");
+        plbyTag = ProductDB.searchProductsByBrand("Apple");
         req.setAttribute("productlist", plbyTag);
+
 
         List<Product> plbyTag2 = new ArrayList<>();
         plbyTag2 = ProductDB.searchProductsByTag("Pin trâu");

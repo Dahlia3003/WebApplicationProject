@@ -25,7 +25,8 @@ public class ProfileServlet extends HttpServlet {
 
         // If the customer is not in the session, fetch it from the database or create a new one
         if (customer == null) {
-            String customerId = "test";
+            String customerId = (String) session.getAttribute("cusID");
+            System.out.println("cus"+customerId);
             customer = CustomerDB.getCustomerById(customerId);
 
             // If the customer is still null, create a new one

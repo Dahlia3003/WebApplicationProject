@@ -31,39 +31,33 @@ public class CheckoutServlet extends HttpServlet {
         doPost(req, resp);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String cusID="test";
+        HttpSession session = request.getSession(true);
+        String cusID = (String) session.getAttribute("cusID");
         Customer customer = CustomerDB.getProfile(cusID);
-        request.setAttribute("message","Bạn muốn thanh toán như thế nào?");
-        String message = "Bạn muốn thanh toán như thế nào?";
+        request.setAttribute("message", "Bạn muốn thanh toán như thế nào?");
         request.setAttribute("customer", customer);
-        int cost=CartDB.getCartById(6).calcTotal();
+        int cost = CartDB.getCartById((Integer) CustomerDB.getCustomerById(cusID).getCart().getId()).calcTotal();
         request.setAttribute("cost", cost);
-        System.out.println(CartDB.getCartById(6).calcTotal());
+        System.out.println(cost);
         String url = "/views/Checkout.jsp";
         String paid = request.getParameter("paid");
         String method = request.getParameter("method");
-        if (paid!=null && cost!=0)
+        System.out.println(paid+method);
+        if (paid!=null)
         {
-            HttpSession session = request.getSession(true);
-            Integer cartID = (Integer) session.getAttribute("cart");
-            cartID = 6;
-            Cart cart = CartDB.getCartById(cartID);
-            List<CartLine> cartLines = new ArrayList<>(cart.getCartList());
-            CartDB.removeAllCartItem(cart);
-            System.out.println(cartLines.size());
-            Order order = new Order(cartLines, new Date(), customer, "Đang giao", method, 0);
-            OrderDB.addOrder(order);
-            sendOrderedEmail(customer.getEmailAddress(), order);
-            request.setAttribute("message","Xác nhận thanh toán thành công!");
-            message="ok";
+            if (paid.equals("true") && cost != 0) {
+                System.out.println("ok");
+                Integer cartID = (Integer) CustomerDB.getCustomerById((String) session.getAttribute("cusID")).getCart().getId();
+                System.out.println(cartID);
+                Cart cart = CartDB.getCartById(cartID);
+                List<CartLine> cartLines = new ArrayList<>(cart.getCartList());
+                CartDB.removeAllCartItem(cart);
+                Order order = new Order(cartLines, new Date(), customer, "Đang giao", method, 0);
+                OrderDB.addOrder(order);
+                sendOrderedEmail(customer.getEmailAddress(), order);
+                request.setAttribute("message", "Xác nhận thanh toán thành công!");
+            }
         }
-        if (cost==0)
-        {
-            message="Giỏ hàng của bạn đang rỗng!";
-        }
-        Gson gson = new Gson();
-        response.setContentType("application/json");
-        response.getWriter().write(gson.toJson(message));
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }

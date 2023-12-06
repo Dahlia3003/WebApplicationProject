@@ -56,7 +56,7 @@ public class MailServlet extends HttpServlet {
     }
 
     private String generateConfirmationLink(String action, String email) {
-        return "http://localhost:8080/WebAppProject_war_exploded/mailconfirm?action=" + action + "&email=" + email + "&code=" + UUID.randomUUID().toString();
+        return "http://localhost:8080/mailconfirm?action=" + action + "&email=" + email + "&code=" + UUID.randomUUID().toString();
     }
 
     private void sendConfirmationEmail(String toEmail, String confirmationLink) {

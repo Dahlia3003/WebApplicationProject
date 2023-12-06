@@ -55,7 +55,7 @@
     <h1><i class="fa fa-check-circle" aria-hidden="true" style="color: #E6A1C3;"></i> Email verified</h1>
     <p>Your email is verified for Lomotif username <a href="#" style="font-weight: bold; color: #9DA4DB;">@someusername</a>.</p>
     <p>Redirecting you to Lomotif app in <span id="count">5</span>.</p>
-    <a href="http://localhost:8080/WebAppProject_war_exploded/views/LoginPage.jsp" class="button" id="goToApp">Go to app now</a>
+    <a href="http://localhost:8080/views/LoginPage.jsp" class="button" id="goToApp">Go to app now</a>
   </div>
 </div>
 
@@ -68,14 +68,14 @@
 
     if (count === 0) {
       clearInterval(redirectTimer);
-      window.location.href = "http://localhost:8080/WebAppProject_war_exploded/views/LoginPage.jsp"; // Replace with your app URL
+      window.location.href = "http://localhost:8080/views/LoginPage.jsp"; // Replace with your app URL
     }
   }, 1000);
 
   // Redirect when the "Go to app now" button is clicked
   document.getElementById("goToApp").addEventListener("click", function () {
     clearInterval(redirectTimer);
-    window.location.href = "http://localhost:8080/WebAppProject_war_exploded/views/LoginPage.jsp"; // Replace with your app URL
+    window.location.href = "http://localhost:8080/views/LoginPage.jsp"; // Replace with your app URL
   });
 </script>
 </body>
