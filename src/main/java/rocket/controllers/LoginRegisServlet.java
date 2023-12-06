@@ -1,22 +1,23 @@
 package rocket.controllers;
 
+import jakarta.mail.Session;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.*;
 import rocket.data.CartDB;
 import rocket.data.CustomerDB;
 import rocket.models.Cart;
 import rocket.models.Customer;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.Date;
 
 @WebServlet(name = "LoginRegisterServlet", value = "/loginregister")
 public class LoginRegisServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
         String action = req.getParameter("action");
         req.setAttribute("action", action);
         if ("register".equals(action)) {
@@ -25,16 +26,58 @@ public class LoginRegisServlet extends HttpServlet {
         if ("forgetpassword".equals(action)){
             forgetpass(req,rep);
         }
+        if ("login".equals(action)){
+            login(req, rep);
+        }
+        System.out.println("Im here");
+    }
+    private void login(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
+        String text = req.getParameter("logintext");
+        String pass = req.getParameter("password");
+        Customer cus1 = CustomerDB.getCustomerByEmail(text);
+        Customer cus2 = CustomerDB.getCustomerById(text);
+        HttpSession s = req.getSession();
+
+        if (cus1!=null && cus1.getPassword().equals(pass))
+        {
+            Cookie nameCookie = new Cookie("cusID", cus1.getUserID());
+            s.setAttribute("cusID", cus1.getUserID());
+            nameCookie.setMaxAge(60 * 60 * 24); // Cookie expires in 1 day (adjust as needed)
+            rep.addCookie(nameCookie);
+
+            rep.sendRedirect(req.getContextPath() + "/homeservlet");
+        }
+        else if (cus2!=null && cus2.getPassword().equals(pass) )
+        {
+            if (!cus2.getEmailAddress().contains("/not"))
+            {
+                Cookie nameCookie = new Cookie("cusID", cus2.getUserID());
+                nameCookie.setMaxAge(60 * 60 * 24); // Cookie expires in 1 day (adjust as needed)
+                rep.addCookie(nameCookie);
+                rep.sendRedirect(req.getContextPath() + "/homeservlet");
+                s.setAttribute("cusID", cus1.getUserID());
+            }
+            else
+            {
+                req.setAttribute("isLoginSuccess", "0");
+                getServletContext().getRequestDispatcher("/views/LoginPage.jsp").forward(req, rep);
+            }
+        }
+        else {
+            req.setAttribute("isLoginSuccess", "0");
+            getServletContext().getRequestDispatcher("/views/LoginPage.jsp").forward(req, rep);
+        }
     }
     private void forgetpass(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
         String email = req.getParameter("email");
         if (CustomerDB.isEmailDuplicate(email)) {
             req.setAttribute("email",email);
+            req.setAttribute("isForgetSuccess", "1");
             getServletContext().getRequestDispatcher("/mailservlet").forward(req, rep);
         }
         else
         {
-            req.setAttribute("isForgetSuccess", "1");
+            req.setAttribute("isForgetSuccess", "0");
             getServletContext().getRequestDispatcher("/views/ForgotPasswordSendMail.jsp").forward(req, rep);
         }
     }

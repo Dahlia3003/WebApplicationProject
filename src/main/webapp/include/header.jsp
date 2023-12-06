@@ -29,7 +29,14 @@
         <div class="text_div underlinestroke">Asus</div>
         <div class="text_div underlinestroke">Google</div>
         <div class="text_div underlinestroke">Nubia</div>
-        <div class="text_div underlinestroke">Phan Lê Thành Công</div>
+        <c:choose>
+            <c:when test="${not empty Username}">
+                <div class="text_div underlinestroke">${Username}</div>
+            </c:when>
+            <c:otherwise>
+                <div class="text_div">Đăng Nhập</div>
+            </c:otherwise>
+        </c:choose>
         <div class="icon_div underlinestroke" id="iconSearch" onclick="toggleIconSearch()" >
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                 <path d="M13.9857 13.202L10.1157 9.33195C10.8167 8.40295 11.2377 7.25095 11.2377 5.99995C11.2377 2.93995 8.7487 0.449951 5.6877 0.449951C2.6277 0.449951 0.137695 2.93995 0.137695 5.99995C0.137695 9.06095 2.6277 11.55 5.6877 11.55C6.9387 11.55 8.0907 11.129 9.0197 10.428L12.8897 14.298C13.0407 14.449 13.2397 14.526 13.4377 14.526C13.6357 14.526 13.8337 14.45 13.9857 14.298C14.2887 13.995 14.2887 13.505 13.9857 13.202ZM1.2377 5.99995C1.2377 3.54595 3.2347 1.54995 5.6877 1.54995C8.1417 1.54995 10.1377 3.54695 10.1377 5.99995C10.1377 8.45295 8.1417 10.45 5.6877 10.45C3.2337 10.45 1.2377 8.45395 1.2377 5.99995Z" fill="black" fill-opacity="0.8"/>

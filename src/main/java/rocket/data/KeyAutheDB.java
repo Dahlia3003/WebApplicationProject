@@ -49,6 +49,7 @@ public class KeyAutheDB {
     public static void addKey(KeyAuthe key) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
+        System.out.println("asdasd");
         try {
             trans.begin();
             em.persist(key);
