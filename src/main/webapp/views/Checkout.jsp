@@ -10,6 +10,7 @@
 </head>
 <body>
 <article>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <section class="head">
         <div class="text">
             <h1>Thanh toán</h1>
@@ -19,7 +20,7 @@
         </div>
     </section>
     <section class="payment">
-        <h1>${message}</h1>
+        <h1 id="message">${message}</h1>
         <section class="payment_info">
             <section class="select_payment">
                 <div class="method" id="cod" onclick="displayPaymentInfo('cod')">
@@ -110,11 +111,11 @@
                 </section>
             </section>
         </section>
-        <a href="${request.contextPath}/views/checkout?paid=true&method=Thanh toán khi nhận hàng" id="pay" style="text-decoration: none; color:black; width: 100%">
-            <button class="button" >
+<%--        <a href="${request.contextPath}/views/checkout?paid=true&method=Thanh toán khi nhận hàng" id="pay" style="text-decoration: none; color:black; width: 100%">--%>
+            <button class="button" onclick="confirmOrder(this)">
                 <label>Xác nhận thanh toán</label>
             </button>
-        </a>
+<%--        </a>--%>
     </section>
 </article>
 <script src="../JS/checkout.js"></script>
