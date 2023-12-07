@@ -36,7 +36,11 @@ public class LoginRegisServlet extends HttpServlet {
     private void login(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
         String text = req.getParameter("logintext");
         String pass = req.getParameter("password");
-        String remember = req.getParameter("remember");
+        String remember = "";
+        if( req.getParameter("remember")!=null){
+            remember =req.getParameter("remember");
+        }
+        System.out.println(remember);
         Customer cus1 = CustomerDB.getCustomerByEmail(text);
         Customer cus2 = CustomerDB.getCustomerById(text);
         Admin admin = AdminDB.getAdminById(text);
