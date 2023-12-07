@@ -18,7 +18,7 @@
                 Thanh toán với lãi suất thấp, thời hạn lên đến 24 tháng và chỉ cần trả trước 20% khi bạn chọn Trả Góp Hàng Tháng với MoMo.*
             </div>
             <div>
-                Tìm hiểu thêm asdas
+                Xin Chào Mừng
             </div>
         </div>
     </div>
@@ -30,178 +30,170 @@
             </div>
         </div>
         <div class="brands">
-            <div class="brand_items">
+            <a href="/productservlet?type=brand&value=Apple" style=" text-decoration: none" class="brand_items">
                 <div>
-                    <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong" >
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzjHSzz9NAeSMZWKmu6J6lTT-mPMseP0ShYw&usqp=CAU>
                 </div>
                 <div>
                     Apple
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Samsung" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Samsung
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Xiaomi" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Xiaomi
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Oppo" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     OPPO
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Realmi" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Realmi
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Vivo" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Vivo
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Asus" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Asus
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Google" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Google
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Nokia" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Nokia
                 </div>
+            </a>
+        </div>
+        <div class="product">
+            <div class="product_slogan">
+                <div class="slogan_div">
+                    Flagship mới ra mắt
+                </div>
+                <a href="/productservlet?type=tag&value=Flagship" style=" text-decoration: none" class="more_div">
+                    Xem thêm >
+                </a>
             </div>
-            <div class="brand_items">
-                <div>
-                    Xem Thêm >
+            <div class="product_items_wrapper">
+                <a class="slide_button_left" onclick="prevSlide('tray0')"><</a>
+                <div class="product_items" id="tray0">
+                    <div class="first_items">
+                        <div class="text_div">
+                            Siêu phẩm điện thoại thế hệ mới của các nhà sản xuất hàng đầu thế giới
+                        </div>
+                    </div>
+                    <c:forEach var="p" items="${productlist}">
+                        <a href="/detail?productid=${p.productId}" style="text-decoration: none">
+                            <div class="items">
+                                <div class="image_div">
+                                    <img src="${p.productImage}">
+                                </div>
+                                <div class="items_name_div">
+                                        ${p.productName}
+                                </div>
+                                <div class="price_div">
+                                    <fmt:formatNumber value="${p.price}" type="currency" pattern="###,###,###.00đ" />
+                                </div>
+                            </div>
+                        </a>
+                    </c:forEach>
+                    <a class="slide_button" onclick="nextSlide('tray0')">></a>
                 </div>
             </div>
         </div>
         <div class="product">
             <div class="product_slogan">
                 <div class="slogan_div">
-                    Flashship mới ra mắt
+                    Pin trâu
                 </div>
-                <div class="more_div">
+                <a href="/productservlet?type=tag&value=Pin trâu" style=" text-decoration: none" class="more_div">
                     Xem thêm >
+                </a>
+            </div>
+            <div class="product_items_wrapper">
+                <a class="slide_button_left" onclick="prevSlide('tray1')"><</a>
+                <div class="product_items" id="tray1">
+                    <div class="first_items">
+                        <div class="text_div">
+                            Siêu phẩm điện thoại thế hệ mới của các nhà sản xuất hàng đầu thế giới
+                        </div>
+                    </div>
+                    <c:forEach var="p" items="${productlist1}">
+                        <a href="/detail?productid=${p.productId}" style="text-decoration: none">
+                            <div class="items">
+                                <div class="image_div">
+                                    <img src="${p.productImage}">
+                                </div>
+                                <div class="items_name_div">
+                                        ${p.productName}
+                                </div>
+                                <div class="price_div">
+                                    <fmt:formatNumber value="${p.price}" type="currency" pattern="###,###,###.00đ" />
+                                </div>
+                            </div>
+                        </a>
+                    </c:forEach>
+                    <a class="slide_button" onclick="nextSlide('tray1')">></a>
                 </div>
             </div>
-            <div class="product_items">
+        </div>
+        <div class="product">
+            <div class="product_slogan">
+                <div class="slogan_div">
+                    Gaming
+                </div>
+                <a href="/productservlet?type=tag&value=Gaming" style=" text-decoration: none" class="more_div">
+                    Xem thêm >
+                </a>
+            </div>
+        <div class="product_items_wrapper">
+            <a class="slide_button_left" onclick="prevSlide('tray2')"><</a>
+            <div class="product_items" id="tray2">
                 <div class="first_items">
                     <div class="text_div">
                         Siêu phẩm điện thoại thế hệ mới của các nhà sản xuất hàng đầu thế giới
                     </div>
                 </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <c:forEach var="p" items="${productlist}">
-                    <a href="/views/detail?productid=${p.productId}">
+                <c:forEach var="p" items="${productlist2}">
+                    <a href="/detail?productid=${p.productId}" style="text-decoration: none">
                         <div class="items">
                             <div class="image_div">
                                 <img src="${p.productImage}">
@@ -215,300 +207,43 @@
                         </div>
                     </a>
                 </c:forEach>
+                <a class="slide_button" onclick="nextSlide('tray2')">></a>
             </div>
+        </div>
         </div>
         <div class="product">
             <div class="product_slogan">
                 <div class="slogan_div">
-                    Flashship mới ra mắt
+                    Bao sống ảo
                 </div>
-                <div class="more_div">
+                <a href="/productservlet?type=tag&value=Bao sống ảo" style=" text-decoration: none" class="more_div">
                     Xem thêm >
-                </div>
+                </a>
             </div>
-            <div class="product_items">
-                <div class="first_items">
-                    <div class="text_div">
-                        Siêu phẩm điện thoại thế hệ mới của các nhà sản xuất hàng đầu thế giới
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <c:forEach var="p" items="${productlist2}">
-                    <div class="items">
-                        <div class="image_div">
-                            <img src="${p.productImage}">
-                        </div>
-                        <div class="items_name_div">
-                                ${p.productName}
-                        </div>
-                        <div class="price_div">
-                            <fmt:formatNumber value="${p.price}" type="currency" pattern="###,###,###.00đ" />
+            <div class="product_items_wrapper">
+                <a class="slide_button_left" onclick="prevSlide('tray3')"><</a>
+                <div class="product_items" id="tray3">
+                    <div class="first_items">
+                        <div class="text_div">
+                            Siêu phẩm điện thoại thế hệ mới của các nhà sản xuất hàng đầu thế giới
                         </div>
                     </div>
-                </c:forEach>
-            </div>
-        </div>
-        <div class="product">
-            <div class="product_slogan">
-                <div class="slogan_div">
-                    Flashship mới ra mắt
-                </div>
-                <div class="more_div">
-                    Xem thêm >
-                </div>
-            </div>
-            <div class="product_items">
-                <div class="first_items">
-                    <div class="text_div">
-                        Siêu phẩm điện thoại thế hệ mới của các nhà sản xuất hàng đầu thế giới
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="product">
-            <div class="product_slogan">
-                <div class="slogan_div">
-                    Flashship mới ra mắt
-                </div>
-                <div class="more_div">
-                    Xem thêm >
-                </div>
-            </div>
-            <div class="product_items">
-                <div class="first_items">
-                    <div class="text_div">
-                        Siêu phẩm điện thoại thế hệ mới của các nhà sản xuất hàng đầu thế giới
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="image_div">
-                        <img src="https://s3-alpha-sig.figma.com/img/4566/44c7/61dcbe1020dad8d64abf7fc11ff0cb95?Expires=1701043200&Signature=QR7Vrf8iWKKhrgCoDMeM7g8jJQuMd-YzZ0G1vZovHJCtxTDuFq5XEXApF3aqLW02Sh6mBNRgbIXfAkvFSLZTY7W8~bZgg6mi0ZBzvu3Oykmya~7aDBslLbZy3N6MkvtSJ1GZPiK2DKL9aiBwjaoyQYqIPdACWDaEHQRWQog0o4HLv-E8UfPbSUuG8VGhC7S0zX7~NHE0FReJp9khQFGNjVqozpEamDpjLQAwYYAnjML5Y1i7unixh9f1L2OmlWx0m5phitNVr3GR1-Jr2I4SfzgRzKhErTV3PxgcR~KO01CPQmvg1rOfZpNE4kVyOUgfzHhd38o-DDJyeK2Z3PFdug__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                    </div>
-                    <div class="items_name_div">
-                        iPhone 15 Pro Max 256GB | Chính hãng VN/A
-                    </div>
-                    <div class="price_div">
-                        33.590.000đ
-                    </div>
+                    <c:forEach var="p" items="${productlist3}">
+                        <a href="/detail?productid=${p.productId}" style="text-decoration: none">
+                            <div class="items">
+                                <div class="image_div">
+                                    <img src="${p.productImage}">
+                                </div>
+                                <div class="items_name_div">
+                                        ${p.productName}
+                                </div>
+                                <div class="price_div">
+                                    <fmt:formatNumber value="${p.price}" type="currency" pattern="###,###,###.00đ" />
+                                </div>
+                            </div>
+                        </a>
+                    </c:forEach>
+                    <a class="slide_button" onclick="nextSlide('tray3')">></a>
                 </div>
             </div>
         </div>
@@ -639,7 +374,7 @@
             </div>
         </div>
     </div>
-
+    <script scr="JS/HomePage.js"></script>
 <c:import url="Footer.jsp" />
 </body>
 </html>
