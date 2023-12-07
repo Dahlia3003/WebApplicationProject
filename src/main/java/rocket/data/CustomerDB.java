@@ -77,15 +77,6 @@ public class CustomerDB {
             em.close();
         }
     }
-    public static List<Customer> getCustomerList() {
-        EntityManager em = DBUtil.getEmf().createEntityManager();
-        try {
-            TypedQuery<Customer> query = em.createQuery("SELECT c FROM Customer c", Customer.class);
-            return query.getResultList();
-        } finally {
-            em.close();
-        }
-    }
     public static Customer getCustomerById(String customerId) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
