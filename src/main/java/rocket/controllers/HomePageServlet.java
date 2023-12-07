@@ -30,9 +30,9 @@ public class HomePageServlet extends HttpServlet {
             s.setAttribute("cusID", customerID);
         }
         else
-            req.setAttribute("Username", "");
+        req.setAttribute("Username", "");
         List<Product> plbyTag = new ArrayList<>();
-        plbyTag = ProductDB.searchProductsByBrand("Apple");
+        plbyTag = ProductDB.searchProductsByTag("Flash ship mới ra mắt");
         req.setAttribute("productlist", plbyTag);
 
 

@@ -7,10 +7,13 @@ import rocket.models.Account;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+import rocket.models.Admin;
 import rocket.models.Cart;
 
 import rocket.models.Customer;
 import rocket.Util.DBUtil;
+
+import java.util.List;
 
 public class CustomerDB {
     public static void registerUser(Customer cus) {
@@ -46,6 +49,25 @@ public class CustomerDB {
             em.close();
         }
     }
+
+    public static void updateCustomer(Customer customer) {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        try {
+            System.out.println(customer.getCustomerName());
+            trans.begin();
+            em.merge(customer);
+            trans.commit();
+        } catch (Exception e) {
+            if (trans.isActive()) {
+                trans.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+    }
+
     public static Customer getProfile(String cusID)
     {
         EntityManager em = DBUtil.getEmf().createEntityManager();
@@ -90,6 +112,9 @@ public class CustomerDB {
         return null;
     }
 
+
+
+
     public static boolean isUsernameDuplicate(String username) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         EntityTransaction trans = em.getTransaction();
@@ -110,4 +135,41 @@ public class CustomerDB {
         return count > 0;
     }
 
+    public static List<Customer> getCustomerList() {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        try {
+            TypedQuery<Customer> query = em.createQuery("SELECT c FROM Customer c", Customer.class);
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+    public static void deleteAccount(String userId) {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+
+        try {
+            trans.begin();
+
+            // Tìm kiếm khách hàng dựa trên userId
+            Customer customer = em.find(Customer.class, userId);
+
+            if (customer != null) {
+                // Xóa khách hàng
+                em.remove(customer);
+                trans.commit();
+            } else {
+                // Không tìm thấy khách hàng
+                trans.rollback();
+            }
+        } catch (Exception e) {
+            if (trans.isActive()) {
+                trans.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+    }
 }
