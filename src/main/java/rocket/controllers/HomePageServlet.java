@@ -23,13 +23,15 @@ public class HomePageServlet extends HttpServlet {
         Cookie[] cookies = req.getCookies();
         HttpSession s = req.getSession();
         String customerID = CookieUtil.getCookieValue(cookies, "cusID");
-        System.out.println("home"+customerID);
         if (CustomerDB.getCustomerById(customerID)!=null)
         {
             req.setAttribute("Username", CustomerDB.getCustomerById(customerID).getCustomerName());
             s.setAttribute("cusID", customerID);
         }
         else
+        {
+            req.setAttribute("Username", CustomerDB.getCustomerById(s.getAttribute("cusID").toString()).getCustomerName());
+        }
         req.setAttribute("Username", "");
         List<Product> plbyTag = new ArrayList<>();
         plbyTag = ProductDB.searchProductsByTag("Flash ship mới ra mắt");
