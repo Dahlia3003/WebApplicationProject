@@ -48,6 +48,25 @@ public class CustomerDB {
             em.close();
         }
     }
+
+    public static void updateCustomer(Customer customer) {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        try {
+            System.out.println(customer.getCustomerName());
+            trans.begin();
+            em.merge(customer);
+            trans.commit();
+        } catch (Exception e) {
+            if (trans.isActive()) {
+                trans.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+    }
+
     public static Customer getProfile(String cusID)
     {
         EntityManager em = DBUtil.getEmf().createEntityManager();
@@ -122,4 +141,31 @@ public class CustomerDB {
         }
     }
 
+    public static void deleteAccount(String userId) {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+
+        try {
+            trans.begin();
+
+            // Tìm kiếm khách hàng dựa trên userId
+            Customer customer = em.find(Customer.class, userId);
+
+            if (customer != null) {
+                // Xóa khách hàng
+                em.remove(customer);
+                trans.commit();
+            } else {
+                // Không tìm thấy khách hàng
+                trans.rollback();
+            }
+        } catch (Exception e) {
+            if (trans.isActive()) {
+                trans.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+    }
 }

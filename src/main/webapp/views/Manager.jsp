@@ -39,19 +39,22 @@
                     <th>Phone Number</th>
                     <th>Email Address</th>
                     <th>Delivery Address</th>
+                    <th>Action</th>
+
                 </tr>
                 </thead>
                 <tbody>
                 <c:forEach var="customer" items="${customerList}">
                     <tr>
-                        <td>${customer.userID}</td>
-                        <td>${customer.password}</td>
+                        <td contenteditable="true" onBlur="updateAccountField('${customer.userID}', 'userId', this)">${customer.userID}</td>
+                        <td contenteditable="true" onBlur="updateAccountField('${customer.userID}', 'password', this)">${customer.password}</td>
                         <td>${customer.registerDate}</td>
-                        <td>${customer.customerName}</td>
-                        <td>${customer.phoneNumber}</td>
-                        <td>${customer.emailAddress}</td>
+                        <td contenteditable="true" onBlur="updateAccountField('${customer.userID}', 'customerName', this)">${customer.customerName}</td>
+                        <td contenteditable="true" onBlur="updateAccountField('${customer.userID}', 'phoneNumber', this)">${customer.phoneNumber}</td>
+                        <td contenteditable="true" onBlur="updateAccountField('${customer.userID}', 'emailAddress', this)">${customer.emailAddress}</td>
                         <!-- Apply inline style to the Delivery Address column -->
-                        <td style="max-width: 200px; word-wrap: break-word;">${customer.deliveryAddressDefault}</td>
+                        <td contenteditable="true" onBlur="updateAccountField('${customer.userID}', 'deliveryAddressDefault', this)" style="max-width: 200px; word-wrap: break-word;">${customer.deliveryAddressDefault}</td>
+                        <td><button onclick="deleteAccount('${customer.userID}')">Delete</button></td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -147,6 +150,73 @@
         // Gửi request với tham số
         xhr.send(params);
     }
+
+    function updateAccountField(userId, field, element) {
+        var value = element.innerText;
+
+        // Gọi Ajax để cập nhật giá trị trong cơ sở dữ liệu
+        updateAccountFieldAjax(userId, field, value);
+    }
+
+    function updateAccountFieldAjax(userId, field, value) {
+        // Tạo một đối tượng XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        // Xác định phương thức và URL của request
+        var url = '/updateAccountField';
+        var params = 'userId=' + encodeURIComponent(userId) + '&field=' + encodeURIComponent(field) + '&value=' + encodeURIComponent(value);
+
+        // Mở kết nối
+        xhr.open('POST', url, true);
+
+        // Thiết lập tiêu đề của request
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        // Định nghĩa hàm xử lý khi request hoàn thành
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Xử lý phản hồi từ server (nếu cần)
+                console.log(xhr.responseText);
+            }
+        };
+
+        // Gửi request với tham số
+        xhr.send(params);
+    }
+    function deleteAccount(userId) {
+        var confirmation = confirm('Are you sure you want to delete this account?');
+
+        if (confirmation) {
+            // Gọi Ajax để xóa tài khoản
+            deleteAccountAjax(userId);
+        }
+    }
+
+    function deleteAccountAjax(userId) {
+        var xhr = new XMLHttpRequest();
+        var url = '/deleteAccount';
+        var params = 'userId=' + encodeURIComponent(userId);
+
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    // Xóa dòng từ bảng
+                    var row = document.getElementById(userId);
+                    row.parentNode.removeChild(row);
+
+                    console.log(xhr.responseText);
+                } else {
+                    console.error('Error deleting account');
+                }
+            }
+        };
+
+        xhr.send(params);
+    }
+
 </script>
 </body>
 </html>
