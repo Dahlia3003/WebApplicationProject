@@ -1,4 +1,7 @@
-function selected(self) {
+var pro = document.querySelector('.Product');
+selected(pro, 'Product');
+
+function selected(self, name) {
     var buttonDiv = document.querySelectorAll(".button");
     buttonDiv.forEach(function(div) {
         div.style.backgroundColor="#dadadb";
@@ -6,6 +9,27 @@ function selected(self) {
     });
     self.style.backgroundColor="#F5F5F7";
     self.style.width="101%";
+    var pro = document.querySelector('.Product');
+    var order = document.querySelector('.Order');
+    var acc = document.querySelector('.Account');
+    if (name=="Product")
+    {
+        pro.style.display='block';
+        order.style.display='none';
+        acc.style.display='none';
+    }
+    if (name=="Order")
+    {
+        pro.style.display='none';
+        order.style.display='flex';
+        acc.style.display='none';
+    }
+    if (name=="Account")
+    {
+        pro.style.display='none';
+        order.style.display='none';
+        acc.style.display='flex';
+    }
 }
 function productClicked(self)
 {
