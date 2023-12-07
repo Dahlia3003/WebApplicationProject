@@ -36,10 +36,12 @@ public class Main {
 
         Customer customer = new Customer("test", "123", new Date(), "Thi dz", "0123456789", "duyvnlx2003@gmail.com", "q9", cart);
         Customer customer1 = new Customer("testt", "123", new Date(), "Thi dz", "0123456789", "abc@xyz.com", "q9", cart1);
+        Admin admin = new Admin("admin", "admin", new Date());
 
         EntityManagerFactory emf = DBUtil.getEmf();
         EntityManager entityManager = emf.createEntityManager();
         entityManager.getTransaction().begin();
+        entityManager.persist(admin);
         entityManager.persist(product1);
         entityManager.persist(product2);
         entityManager.persist(product3);

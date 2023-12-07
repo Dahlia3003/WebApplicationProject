@@ -4,8 +4,10 @@ import jakarta.mail.Session;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
+import rocket.data.AdminDB;
 import rocket.data.CartDB;
 import rocket.data.CustomerDB;
+import rocket.models.Admin;
 import rocket.models.Cart;
 import rocket.models.Customer;
 
@@ -34,22 +36,30 @@ public class LoginRegisServlet extends HttpServlet {
     private void login(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
         String text = req.getParameter("logintext");
         String pass = req.getParameter("password");
-        String remember = req.getParameter("remember");
+        String remember = "";
+        if( req.getParameter("remember")!=null){
+            remember =req.getParameter("remember");
+        }
+        System.out.println(remember);
         Customer cus1 = CustomerDB.getCustomerByEmail(text);
         Customer cus2 = CustomerDB.getCustomerById(text);
+        Admin admin = AdminDB.getAdminById(text);
         HttpSession s = req.getSession();
 
         if (cus1!=null && cus1.getPassword().equals(pass))
         {
             Cookie nameCookie = new Cookie("cusID", cus1.getUserID());
             s.setAttribute("cusID", cus1.getUserID());
-            if (remember.equals("on"))
+            if (remember.equals("true"))
             {
                 nameCookie.setMaxAge(60 * 60 * 24); // Cookie expires in 1 day (adjust as needed)
                 rep.addCookie(nameCookie);
                 s.setAttribute("cusID", nameCookie);
             }
-
+            else
+            {
+                s.setAttribute("cusID", nameCookie);
+            }
 
             rep.sendRedirect(req.getContextPath() + "/homeservlet");
         }
@@ -58,16 +68,27 @@ public class LoginRegisServlet extends HttpServlet {
             if (!cus2.getEmailAddress().contains("/not"))
             {
                 Cookie nameCookie = new Cookie("cusID", cus2.getUserID());
-                nameCookie.setMaxAge(60 * 60 * 24); // Cookie expires in 1 day (adjust as needed)
-                rep.addCookie(nameCookie);
-                rep.sendRedirect(req.getContextPath() + "/homeservlet");
                 s.setAttribute("cusID", cus2.getUserID());
+                if (remember.equals("true"))
+                {
+                    nameCookie.setMaxAge(60 * 60 * 24); // Cookie expires in 1 day (adjust as needed)
+                    rep.addCookie(nameCookie);
+                    s.setAttribute("cusID", nameCookie);
+                }
+                else
+                {
+                    s.setAttribute("cusID", nameCookie);
+                }
             }
             else
             {
                 req.setAttribute("isLoginSuccess", "0");
                 getServletContext().getRequestDispatcher("/views/LoginPage.jsp").forward(req, rep);
             }
+        }
+        else if (admin!=null && admin.getPassword().equals(pass) )
+        {
+            rep.sendRedirect(req.getContextPath() + "/manage");
         }
         else {
             req.setAttribute("isLoginSuccess", "0");

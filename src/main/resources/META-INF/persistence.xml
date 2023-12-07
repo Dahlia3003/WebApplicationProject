@@ -11,11 +11,16 @@
         <class>rocket.models.Order</class>
         <class>rocket.models.Product</class>
         <class>rocket.models.KeyAuthe</class>
+        <class>rocket.models.Admin</class>
+
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/PhoneStore"/>
-            <property name="jakarta.persistence.jdbc.user" value="phonestore"/>
-            <property name="jakarta.persistence.jdbc.password" value="123456789"/>
+<!--            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/PhoneStore"/>-->
+<!--            <property name="jakarta.persistence.jdbc.user" value="phonestore"/>-->
+<!--            <property name="jakarta.persistence.jdbc.password" value="123456789"/>-->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgres://phonestore_fqok_user:qhDCbZejKEizJ4oDNt0ggPGqN0WId43K@dpg-cloj8c946foc73c78ua0-a.singapore-postgres.render.com/phonestore_fqok"/>
+            <property name="jakarta.persistence.jdbc.user" value="phonestore_fqok_user"/>
+            <property name="jakarta.persistence.jdbc.password" value="qhDCbZejKEizJ4oDNt0ggPGqN0WId43K"/>
             <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
         </properties>
     </persistence-unit>
