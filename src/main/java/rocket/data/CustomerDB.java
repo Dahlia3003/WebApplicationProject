@@ -12,6 +12,8 @@ import rocket.models.Cart;
 import rocket.models.Customer;
 import rocket.Util.DBUtil;
 
+import java.util.List;
+
 public class CustomerDB {
     public static void registerUser(Customer cus) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
@@ -108,6 +110,16 @@ public class CustomerDB {
                 .setParameter("email", email)
                 .getSingleResult();
         return count > 0;
+    }
+
+    public static List<Customer> getCustomerList() {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        try {
+            TypedQuery<Customer> query = em.createQuery("SELECT c FROM Customer c", Customer.class);
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
     }
 
 }
