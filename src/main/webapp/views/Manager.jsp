@@ -6,6 +6,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Thanh toán</title>
     <link rel="stylesheet" href="../CSS/Manager.css" >
+    <link rel="stylesheet" href="../CSS/ProductManager.css" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" type="text/css">
 </head>
 <body>
@@ -14,13 +15,13 @@
         <div class="logo">
         </div>
         <div class="object">
-            <div class="button" onclick="selected(this)" value="Product">
+            <div class="button" onclick="selected(this,'Product')" name="Product">
                 <label>Product</label>
             </div>
-            <div class="button" onclick="selected(this)" value="Order">
+            <div class="button" onclick="selected(this,'Order')" value="Order">
                 <label>Order</label>
             </div>
-            <div class="button" onclick="selected(this)" value="Account">
+            <div class="button" onclick="selected(this,'Account')" value="Account">
                 <label>Account</label>
             </div>
         </div>
