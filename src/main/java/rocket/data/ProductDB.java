@@ -22,6 +22,17 @@ public class ProductDB {
             em.close();
         }
     }
+    public static List<Product> getAllProducts() {
+        EntityManager em = DBUtil.getEmf().createEntityManager();
+        try {
+            String quere = "SELECT p FROM Product p";
+            TypedQuery<Product> query = em.createQuery(quere, Product.class);
+            List<Product> productList = query.getResultList();
+            return productList;
+        } finally {
+            em.close();
+        }
+    }
     public static Product getProductfromName(String productName){
         EntityManager em = DBUtil.getEmf().createEntityManager();
         TypedQuery<Product> query = em.createQuery("SELECT p FROM Product p WHERE p.productName=:name", Product.class);
@@ -152,6 +163,11 @@ public class ProductDB {
         String[] subParts = parts[0].split("/");
         return subParts;
     }
+    public static String[] getTag(String description){
+        String[] parts = description.split("\\|");
+        String[] subParts = parts[1].split("/");
+        return subParts;
+    }
     public static List<String> getProductImage(String line, String rom) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         TypedQuery<Product> query = em.createQuery("SELECT p FROM Product p WHERE p.line=:line", Product.class);
@@ -170,6 +186,5 @@ public class ProductDB {
         }
         em.close();
         return imagelink;
-
     }
 }

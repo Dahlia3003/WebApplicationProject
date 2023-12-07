@@ -14,18 +14,89 @@
         <div class="logo">
         </div>
         <div class="object">
-            <div class="button" onclick="selected(this)">
+            <div class="button" onclick="selected(this)" value="Product">
                 <label>Product</label>
             </div>
-            <div class="button" onclick="selected(this)">
+            <div class="button" onclick="selected(this)" value="Order">
                 <label>Order</label>
             </div>
-            <div class="button" onclick="selected(this)">
+            <div class="button" onclick="selected(this)" value="Account">
                 <label>Account</label>
             </div>
         </div>
     </nav>
     <section class="manager">
+        <section class="Product">
+            <div class="function">
+                <button style="height: 50%; margin-right: 10rem" onclick="addNew()">
+                    Add new
+                </button>
+            </div>
+            <section class="view">
+                <div class="list">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th style="width:3rem">ID</th>
+                            <th style="width:6rem">Brand</th>
+                            <th style="width:18rem">Product Name</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <c:forEach var="product" items="${products}">
+                            <tr id="${product.productId}" onclick="productClicked(this)">
+                                <td>${product.productId}</td>
+                                <td>${product.brand}</td>
+                                <td>${product.productName}</td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form">
+                    <label id="prid" value="">Product ID: </label><br>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Brand: </label><input type="text" id="brand"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Line: </label><input type="text" id="line"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Product Name: </label><input type="text" id="name"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Price: </label><input type="text" id="price"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Variation: </label><input type="text" id="vari"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Image Link: </label><input type="text" id="link"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Chip: </label><input type="text" id="chip"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>RAM/ROM: </label><input type="text" id="rom"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Screen: </label><input type="text" id="scr"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Camera: </label><input type="text" id="cam"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Pin: </label><input type="text" id="pin"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Connection: </label><input type="text" id="connect"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Available: </label><input type="checkbox" id="avai"><br></div>
+                    <div style="display: flex; margin-bottom: 0.5rem"><label>Tag: </label>       <label for="flagshipCheckbox">
+                        <input type="checkbox" id="flagshipCheckbox" class="tag" value="Flagship">
+                        Flagship
+                    </label>
+
+                        <label for="pinTrauCheckbox">
+                            <input type="checkbox" id="pinTrauCheckbox" class="tag"  value="Pin trâu">
+                            Pin trâu
+                        </label>
+
+                        <label for="gamingCheckbox">
+                            <input type="checkbox" id="gamingCheckbox" class="tag"  value="Gaming">
+                            Gaming
+                        </label>
+
+                        <label for="baoSongAoCheckbox">
+                            <input type="checkbox" id="baoSongAoCheckbox" class="tag"  value="Bao sống ảo">
+                            Bao sống ảo
+                        </label><br></div>
+                    <button id="bt" value="update" onclick="buttonCLick(this)">
+                        Update
+                    </button>
+                    <label id="noti"></label>
+                </div>
+                <div class="pic">
+                    <img id="pic" src="" style="max-width: 15rem">
+                </div>
+            </section>
+        </section>
         <section class="Account">
             <h2>Customer List</h2>
             <table border="1">
