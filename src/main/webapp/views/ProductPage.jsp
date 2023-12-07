@@ -12,83 +12,78 @@
 <body>
     <div class="product_container">
         <div class="brands">
-            <div class="brand_items">
+            <a href="/productservlet?type=brand&value=Apple" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong" >
                 </div>
                 <div>
                     Apple
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Samsug" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Samsung
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Xiaomi" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Xiaomi
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Oppo" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     OPPO
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Realmi" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Realmi
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Vivo" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Vivo
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Asus" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Asus
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Google" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Google
                 </div>
-            </div>
-            <div class="brand_items">
+            </a>
+            <a href="/productservlet?type=brand&value=Nokia" style=" text-decoration: none" class="brand_items">
                 <div>
                     <img src="https://s3-alpha-sig.figma.com/img/9360/8395/21dfb11202a1c3f1d1a7f5a4e34bc80c?Expires=1701043200&Signature=VPUDE1a8Loedy2aKqY9Wckwm4KpIKdrYBtjfWrhbsvLdKt5lK44OBLHHnhpnKD7tPlOSEVh~eRz3IjH~PJ09x0YfQnrBCNO-9sbAj2Kxwnc8Xt5Jc3LV2StVS6YouENeMwpYTn0FuHGsDe-6AnjLqFF-wcA3jN6944noJvR3O5HD4g-QRTmzf3~~oYsaDO~Y-a13kRY~vBeUNqEOrEk8OAwMNuvuGduAIWm1Y2KJ-h~HUfH8IrRWLxoVWsiaFU8WXcScwQ6b54xlrAtHDinRJJme1WD9vfAixkgC-YlKXqfEhua1YEN5-iUjPr-WQjYbGrsJ0ByU4fIZdRkVnOkBSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wrong">
                 </div>
                 <div>
                     Nokia
                 </div>
-            </div>
-            <div class="brand_items">
-                <div>
-                    Xem Thêm >
-                </div>
-            </div>
+            </a>
         </div>
         <c:forEach var="p" items="${productlist}" varStatus="loop">
             <c:if test="${loop.index % productperpage == 0}">

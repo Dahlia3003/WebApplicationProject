@@ -42,6 +42,14 @@ public class ProductServlet extends HttpServlet
             req.setAttribute("productlist", plbyALL);
             req.setAttribute("totalpages", plbyALL.size() / productperpage );
         }
+        else if (type.equals("tag"))
+        {
+            List<Product> plbyBrand = new ArrayList<>();
+            plbyBrand = ProductDB.searchProductsByTag(value);
+            req.setAttribute("productlist", plbyBrand);
+            req.setAttribute("totalpages", plbyBrand.size() / productperpage );
+        }
+
 
         if (req.getParameter("page") != null)
         {
