@@ -84,6 +84,19 @@ public class ProductDB {
         }
     }
 
+        public static List<Product> searchProductsByEverything(String string) {
+            EntityManager em = DBUtil.getEmf().createEntityManager();
+            String queryString = "SELECT p FROM Product p " +
+                    "WHERE LOWER(p.brand) LIKE LOWER(:string) " +
+                    "OR LOWER(p.line) LIKE LOWER(:string) " +
+                    "OR LOWER(p.productName) LIKE LOWER(:string) " +
+                    "OR LOWER(p.productDescription) LIKE LOWER(:string) " +
+                    "OR LOWER(p.variation) LIKE LOWER(:string)";
+            TypedQuery<Product> query = em.createQuery(queryString, Product.class);
+            query.setParameter("string", "%" + string + "%");
+            return query.getResultList();
+        }
+
     public static List<Product> searchProductsByTag(String tag) {
         EntityManager em = DBUtil.getEmf().createEntityManager();
         String queryString = "SELECT p FROM Product p WHERE p.productDescription LIKE :tag";
