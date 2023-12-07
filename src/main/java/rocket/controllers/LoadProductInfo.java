@@ -12,7 +12,7 @@ import rocket.models.Product;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "infoServlet", value = "/views/info")
+@WebServlet(name = "infoServlet", value = "/productinfo")
 public class LoadProductInfo extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");

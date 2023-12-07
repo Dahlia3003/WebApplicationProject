@@ -9,8 +9,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import rocket.data.CustomerDB;
 import rocket.data.OrderDB;
+import rocket.data.ProductDB;
 import rocket.models.Customer;
 import rocket.models.Order;
+import rocket.models.Product;
 
 import java.io.IOException;
 import java.util.List;
@@ -26,7 +28,8 @@ public class ManageServlet extends HttpServlet {
         String action = request.getParameter("action");
         loadCustomer(request, response);
         loadOrder(request, response);
-
+        List<Product> products= ProductDB.getAllProducts();
+        request.setAttribute("products", products);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/views/Manager.jsp");
         dispatcher.forward(request, response);
     }
